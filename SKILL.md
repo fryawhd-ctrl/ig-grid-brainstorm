@@ -125,7 +125,9 @@ flowchart TD
     A["Present Brainstorming Blueprints"] --> B["Pause & Ask User: Confirm GENERATE or Request Edits"]
     B -->|User Requests Edits| C["Apply Revisions to Blueprints"]
     C --> B
-    B -->|User Confirms GENERATE| D["Generate 6 Images via Built-in Tool"]
+    B -->|User Confirms GENERATE| D["Generate 6 Images Sequentially (10s cooldown between each)"]
+    D -->|503 or Capacity Error| R["Wait 35s & Retry up to 3x"]
+    R --> D
     D --> E["Save Images & Compile captions.txt into Same Directory"]
     E --> F["Display Exact Local Folder Path & File Links"]
 ```
@@ -142,12 +144,26 @@ flowchart TD
   3. Pause and ask the user again to confirm (`"GENERATE"`) or request further edits.
   4. Repeat this loop until the user approves.
 
-### Step 3: Native Image Generation & Caption Compilation (Upon "GENERATE" Approval)
-- When the user approves with `"GENERATE"` (or equivalent confirmation):
-  1. Invoke the built-in `image-generator` subagent for each of the 6 tiles using the detailed visual prompts established in the blueprints.
-  2. Ensure prompts enforce the checkerboard background value, product consistency, scale variation, safe margins, and on-image micro-copy.
-  3. Save the 6 generated images into a structured local directory on the user's machine (e.g., `<Artifact Directory Path>/generated_grid/` or `<Workspace>/generated_grid/`).
-  4. **Compile All 6 Captions into a Single `captions.txt` File**:
+### Step 3: Native Sequential Image Generation & Retry Logic (Upon "GENERATE" Approval)
+When the user approves with `"GENERATE"` (or equivalent confirmation):
+
+1. **Sequential Generation Only (Never in Parallel)**:
+   - Generate the 6 images one by one (Tile 1, then Tile 2, through Tile 6) in strict sequence.
+   - **Never launch multiple image generation calls concurrently or in parallel** to preserve API quota and prevent resource exhaustion.
+
+2. **Inter-Generation Cooldown**:
+   - Pause and wait **10 seconds** between each successful image generation before initiating the request for the next tile.
+
+3. **Built-in Capacity Retry Logic (`503` / `MODEL_CAPACITY_EXHAUSTED`)**:
+   - If an image generation request fails with a `503`, `MODEL_CAPACITY_EXHAUSTED`, rate limit, or temporary server overload error:
+     - **Do NOT abort or cancel the workflow.**
+     - Pause and wait **35 seconds** (or the server's recommended retry delay if longer).
+     - Retry the exact same failed image generation request.
+     - Allow up to **3 retry attempts** per image tile before halting and reporting the failure to the user.
+
+4. **Directory Storage & Caption Compilation**:
+   - Save the 6 generated images into a structured local directory on the user's machine (e.g., `<Artifact Directory Path>/generated_grid/` or `<Workspace>/generated_grid/`).
+   - **Compile All 6 Captions into a Single `captions.txt` File**:
      - Inside that exact same image generation directory, write a single `captions.txt` file containing all 6 captions.
      - Structure the file cleanly, ordered by reverse-chronological upload sequence (**Upload #1 through Upload #6**):
        ```text
@@ -166,5 +182,6 @@ flowchart TD
        [Instagram SEO Alt-Text Description]
        ================================================================================
        ```
-     - This allows effortless copy-pasting during scheduling or manual publishing.
-  5. **Display the exact local folder path** clearly to the user with clickable `file://` links for each generated image file and the compiled `captions.txt` file.
+
+5. **Local Path Display**:
+   - Once all 6 images are generated, clearly display the **exact local folder path** on the user's computer where the images and `captions.txt` are saved, along with clickable `file://` links for direct access.
