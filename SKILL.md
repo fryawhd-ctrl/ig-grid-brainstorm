@@ -128,8 +128,11 @@ flowchart TD
     B -->|User Confirms GENERATE| D["Generate 6 Images Sequentially (10s cooldown between each)"]
     D -->|503 or Capacity Error| R["Wait 35s & Retry up to 3x"]
     R --> D
-    D --> E["Save Images & Compile captions.txt into Same Directory"]
+    D -->|Success| E["Save Images & Compile captions.txt into Same Directory"]
     E --> F["Display Exact Local Folder Path & File Links"]
+    R -->|Failed After 3 Retries / Unavailable| G["Ask User: Export Complete Blueprint?"]
+    G -->|User Agrees| H["Export grid-blueprint.md with Prompts & Specs"]
+    H --> F
 ```
 
 ### Step 1: Brainstorming & Review Pause
@@ -159,9 +162,9 @@ When the user approves with `"GENERATE"` (or equivalent confirmation):
      - **Do NOT abort or cancel the workflow.**
      - Pause and wait **35 seconds** (or the server's recommended retry delay if longer).
      - Retry the exact same failed image generation request.
-     - Allow up to **3 retry attempts** per image tile before halting and reporting the failure to the user.
+     - Allow up to **3 retry attempts** per image tile before moving to the fallback flow below.
 
-4. **Directory Storage & Caption Compilation**:
+4. **Directory Storage & Caption Compilation (Upon Success)**:
    - Save the 6 generated images into a structured local directory on the user's machine (e.g., `<Artifact Directory Path>/generated_grid/` or `<Workspace>/generated_grid/`).
    - **Compile All 6 Captions into a Single `captions.txt` File**:
      - Inside that exact same image generation directory, write a single `captions.txt` file containing all 6 captions.
@@ -185,3 +188,33 @@ When the user approves with `"GENERATE"` (or equivalent confirmation):
 
 5. **Local Path Display**:
    - Once all 6 images are generated, clearly display the **exact local folder path** on the user's computer where the images and `captions.txt` are saved, along with clickable `file://` links for direct access.
+
+---
+
+### Step 4: Graceful Fallback & Blueprint Export (If Generation Fails or Unavailable)
+
+If automated image generation fails after all 3 retry attempts (or if no image generation tool/API key is available in the current environment):
+
+1. **Prompt the User with Graceful Fallback**:
+   - Do **NOT** abort or leave the user empty-handed.
+   - Ask the user directly:
+     > *"Image generation is currently unavailable after multiple attempts. Would you like me to export a complete downloadable blueprint so you can generate these 6 tiles in Gemini, ChatGPT, or Midjourney?"*
+
+2. **Generate `grid-blueprint.md` Upon User Confirmation**:
+   - When the user confirms (or requests the export):
+     - Create the local output directory (e.g., `<Artifact Directory Path>/generated_grid/` or `<Workspace>/generated_grid/`).
+     - Save `captions.txt` into that directory (ordered by Upload #1 to #6).
+     - Save a clean, self-contained Markdown file named **`grid-blueprint.md`** inside that same directory containing:
+       - **Global Campaign Specs**:
+         - Master color palette with Hex codes & 60-30-10 distribution rules.
+         - Typography specifications (single font family, weights, and hierarchies).
+         - Checkerboard rhythm map across rows 1 & 2.
+         - Instagram recommended aspect ratio (4:5 portrait `1080x1350` or 1:1 square `1080x1080`) with 10–15% safe margin rules.
+       - **Tile-by-Tile Generation Prompts (Tile 1 through Tile 6)**:
+         - Upload order badge and 3×2 grid coordinate.
+         - Composition style (Hero, Metaphor Placement, Human Element, Minimal Negative Space).
+         - Background tone (Dark vs Light).
+         - **Ready-to-use Image Generation Prompt**: A comprehensive, self-contained text prompt explicitly describing the anchor product, lighting, perspective, materials, scale, and background setting, optimized to be pasted directly into Gemini, ChatGPT (DALL-E 3), or Midjourney.
+         - On-image micro-copy (<6–8 words) and placement guide.
+         - Standalone Instagram caption, hashtags, and SEO Alt-Text.
+   - **Display Local Path**: Clearly display the exact local folder path on the user's computer and provide clickable `file://` links to both `grid-blueprint.md` and `captions.txt`.

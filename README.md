@@ -37,13 +37,17 @@ flowchart TD
     B -->|User Confirms GENERATE| D["Generate 6 Images Sequentially (10s cooldown between each)"]
     D -->|503 or Capacity Error| R["Wait 35s & Retry up to 3x"]
     R --> D
-    D --> E["Save Images & Compile captions.txt into Same Directory"]
+    D -->|Success| E["Save Images & Compile captions.txt into Same Directory"]
     E --> F["Display Exact Local Folder Path & File Links"]
+    R -->|Failed After 3 Retries / Unavailable| G["Ask User: Export Complete Blueprint?"]
+    G -->|User Agrees| H["Export grid-blueprint.md with Prompts & Specs"]
+    H --> F
 ```
 
 1. **Review Pause**: Present the strategy and 6 post blueprints, then pause for user confirmation.
 2. **Revision Loop**: Seamlessly refine angles, copy, or colors until the user replies with `GENERATE`.
 3. **Sequential Generation & Caption Compilation**: Invoke the native `image-generator` tool to generate the 6 images sequentially (with a 10s cooldown between images and 35s auto-retries for 503 capacity errors). Compile all 6 individual captions into a single `captions.txt` inside that same folder (ordered by upload sequence), and clearly display the local folder path.
+4. **Graceful Fallback Export**: If image generation fails after 3 retries or is unavailable, ask the user if they'd like a complete blueprint export. Upon confirmation, save `grid-blueprint.md` containing global specs, campaign rules, and copy-pasteable image generation prompts for Gemini, ChatGPT, or Midjourney alongside `captions.txt`.
 
 ---
 
