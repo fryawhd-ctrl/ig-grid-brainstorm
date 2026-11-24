@@ -2,7 +2,8 @@
 name: ig-grid-brainstorm
 description: >-
   Brainstorm a single anchor image into a cohesive 6-post Instagram Grid (2 rows x 3 columns)
-  with strict visual rules, checkerboard rhythm, and automated image generation.
+  with strict visual rules, checkerboard rhythm, humanized zero-AI-slop copy, Instagram SEO-engineered
+  marketing captions, strategic 3-tier hashtag clustering, and automated image generation.
   Use this skill whenever the user provides an image (or image concept/path) and asks to create,
   plan, or brainstorm an Instagram grid, feed layout, 6 matching posts, or a cohesive visual campaign
   sharing the same color tone, consistent typography, individual standalone captions, and generated images.
@@ -10,7 +11,7 @@ description: >-
 
 # Instagram Grid Brainstormer (`ig-grid-brainstorm`)
 
-Transform a single anchor image into an aesthetic, high-converting 6-tile Instagram profile grid (2 rows × 3 columns) adhering to strict visual consistency rules, checkerboard feed rhythm, and an interactive revision-to-generation workflow.
+Transform a single anchor image into an aesthetic, high-converting 6-tile Instagram profile grid (2 rows × 3 columns) adhering to strict visual consistency rules, checkerboard feed rhythm, humanized copywriting (zero AI slop), campaign-wide Instagram SEO funnel strategy, and an interactive revision-to-generation workflow.
 
 ---
 
@@ -37,8 +38,8 @@ Every 6-tile grid brainstorm must strictly enforce these four visual rules:
 
 ## 2. Creative Concept & Composition Rules
 
-1. **One Theme, Six Angles**:
-   - Tie all six posts to a single overarching campaign theme (e.g., product launch, seasonal campaign, Valentine's Day, summer drop) rather than treating them as 6 disconnected ads.
+1. **One Overarching Campaign Theme**:
+   - Tie all six posts to a single campaign narrative (e.g., product launch, seasonal moment, lifestyle movement) rather than treating them as 6 disconnected ads.
 2. **Vary Scale & Interaction Across Tiles**:
    - Never place the product dead-center at the exact same scale in every frame. Distribute these four compositional treatments across the 6 tiles:
      - **Hero Shot**: Full-size product interacting with miniature or surreal elements.
@@ -48,19 +49,74 @@ Every 6-tile grid brainstorm must strictly enforce these four visual rules:
 
 ---
 
-## 3. Copywriting & Layout Rules
+## 3. Copywriting, Humanization & Zero-AI-Slop Rules
 
-1. **Micro-Copy Only (On-Image Text)**:
+All written copy—both **On-Image Micro-Copy** and **Instagram Captions**—must sound human, sharp, and authentic.
+
+### Mandatory Skill Enforcement
+Whenever drafting micro-copy or caption text, actively read and apply the rules from:
+- `~/.gemini/config/skills/humanizer/SKILL.md`
+- `~/.gemini/config/skills/no-ai-slop/SKILL.md`
+
+### Inline Anti-AI-Slop Fallback (Always Enforce)
+Even if running in an environment without the local skill files above, enforce these strict guidelines:
+
+1. **Banned AI Words & Buzzwords**:
+   - Never use: `delve`, `foster`, `leverage`, `utilize`, `streamline`, `robust`, `cutting-edge`, `paradigm shift`, `game-changer`, `tapestry`, `realm`, `beacon`, `elevate`, `supercharge`, `harness`, `meticulous`, `ever-evolving`, `transformative`, `multifaceted`.
+2. **Banned Binary Contrasts ("Not X, but Y")**:
+   - Never write: *"It's not just a coffee. It's a ritual"* or *"This isn't about productivity, it's about peace."*
+   - Fix: State the claim directly: *"A 15-gram pour-over changes the morning."*
+3. **Banned Colon Reveals & Faux-Drama**:
+   - Never write: *"The secret: it brews in 3 minutes"* or *"The best part: it learns."*
+   - Fix: Use standard sentence structures: *"It brews in three minutes."*
+4. **Banned Em-Dash Crutches**:
+   - Do not use em-dashes (`—`) as an automatic sentence bridge or rhythm crutch. Use clean periods or natural commas instead.
+5. **Banned Fake-Insight Setups & Kickers**:
+   - Cut: *"Here's what nobody tells you,"* *"What most people get wrong:"*
+   - Cut mic-drop endings: *"Read that again."* or *"Let that sink in."*
+6. **On-Image Micro-Copy Limits**:
    - Keep on-image text strictly under **6–8 words per tile**.
-   - Let the visual metaphor carry the visual impact; leave deeper storytelling and details to the caption.
-2. **Balanced Text Placement**:
-   - Anchor text consistently across the set: strictly top-center, strictly bottom-center, or integrated into a designated card/badge container.
-3. **Safe Margins (10–15% Buffer)**:
-   - Keep all text, logos, and key visual elements at least **10–15% away from every edge** of the square/vertical canvas so nothing gets cropped in the Instagram profile grid view.
+   - Anchor text consistently (strictly top-center, bottom-center, or a designated badge).
+   - Safe margins: Keep text and focal points at least **10–15% away from canvas edges** to prevent profile grid cropping.
 
 ---
 
-## 4. Grid Architecture & Upload Sequencing
+## 4. Deep Instagram SEO & Marketing Funnel Strategy
+
+Captions are not mere literal descriptions of what is visible in a tile. They are **SEO-engineered marketing assets** that form a cohesive campaign funnel.
+
+Refer to [Instagram SEO & Marketing Guide](./references/instagram-seo-guide.md) for deep-dive methodology.
+
+### 1. Pre-Drafting Research Protocol
+Before drafting, identify:
+- **Primary Search Keyword**: Category-level search term that real buyers type into Instagram (e.g., `Specialty Coffee Roaster`).
+- **Secondary Long-Tail Phrases**: High-intent, problem/solution queries (e.g., `V60 brew ratio`, `Ethiopian washed beans`, `morning coffee routine`).
+- **Buyer Intent & Cultural Context**: Pain points with inferior alternatives, seasonal relevance, and lifestyle aspiration.
+
+### 2. The 6-Post Funnel Narrative Arc
+Distribute the narrative across the 6 tiles so the grid acts as an integrated marketing journey:
+- **Tile 1 (Top-Left / Upload #6) - Top of Funnel (Awareness)**:
+  - Big vision hook containing the primary high-volume SEO keyword. Universal aspiration.
+- **Tile 2 (Top-Center / Upload #5) - Mid-Funnel (Craft & Anatomy)**:
+  - Translates materials, ingredients, or engineering into tangible buyer benefits.
+- **Tile 3 (Top-Right / Upload #4) - Mid-Funnel (Action Guide & How-To)**:
+  - High-save value tutorial or formula solving a specific friction point (saves drive discovery).
+- **Tile 4 (Bottom-Left / Upload #3) - Brand Authority (Philosophy & Story)**:
+  - Emotional resonance, founder ethos, or contrarian point of view that builds brand fans.
+- **Tile 5 (Bottom-Center / Upload #2) - Conversion (Objection Handling & Myth Debunk)**:
+  - Directly tackles a common buyer hesitation or contrasts against inferior alternatives.
+- **Tile 6 (Bottom-Right / Upload #1) - Bottom of Funnel (Community & Direct Action)**:
+  - Conversation starter, direct purchase/booking call-to-action, or bookmark invitation.
+
+### 3. Strategic 3-Tier Hashtag Ladder (Per Tile)
+Every caption must include a non-spammy set of **8–12 high-value hashtags** divided into three strategic tiers:
+- **Tier 1: Broad Category (2–3 tags)**: High search volume (500k+ posts) establishing broad algorithmic classification (e.g., `#SpecialtyCoffee #SlowLiving`).
+- **Tier 2: Mid-Volume Niche & Buyer Intent (4–5 tags)**: Targeted search terms (50k–500k posts) used by active enthusiasts and shoppers (e.g., `#PouroverBrewing #EthiopianCoffee #HomeBarista`).
+- **Tier 3: Hyper-Specific / Community / Branded (2–3 tags)**: Low competition (<50k posts) for immediate top-ranking authority and community tagging (e.g., `#V60Ratio #MorningRitualCoffee`).
+
+---
+
+## 5. Grid Architecture & Upload Sequencing
 
 Instagram displays profile feeds in 3 columns. The 6 posts span two complete rows:
 
@@ -85,13 +141,13 @@ To ensure the profile grid renders properly as newer uploads push older posts to
 
 ---
 
-## 5. Output Blueprint Schema (Per Tile)
+## 6. Output Blueprint Schema & `captions.txt` Format
 
-For each tile (1 to 6), output:
-
+### In-Chat Blueprint (Per Tile)
 ```markdown
 ### Tile [N]: [Catchy Name]
 - **Grid Position**: [Row X, Col Y] | **Upload Order**: Upload #[M] of 6
+- **Funnel Stage**: [Top of Funnel / Mid-Funnel Craft / Action Guide / Philosophy / Objection / Direct CTA]
 - **Composition Style**: [Hero / Metaphor Placement / Human Element / Minimal Negative Space]
 - **Background Tone**: [Dark / Light] (Checkerboard Rhythm)
 
@@ -99,33 +155,35 @@ For each tile (1 to 6), output:
 - **Product Scale & Context**: [Scale % and environment description]
 - **Lighting & Perspective**: [Preserved from anchor image]
 - **Background & Color Distribution**: [Exact hex color codes used]
-- **On-Image Micro-Copy**: "[Max 6-8 words]" ([Font Family], [Weight], [Placement: Top-Center / Bottom-Center])
+- **On-Image Micro-Copy**: "[Max 6-8 human words]" ([Font Family], [Weight], [Placement])
 - **Safe Margin Verification**: [Confirmed 10-15% boundary compliance]
 
-#### Individual Caption (Minimalist High-Converting Formula)
-**[Hook Line <125 characters that stops the scroll before the 'more' fold]**
+#### SEO Hook & Humanized Caption
+**[SEO Opening Hook Line <125 characters with primary keyword before the 'more' fold]**
 
-[1-3 concise, punchy paragraphs or bullet points delivering immediate takeaway/context]
+[1-3 concise, punchy paragraphs written without AI clichés, delivering specific value]
 
-[Clear single-action CTA or engagement question]
+[Clear single-action CTA or conversation question]
 
----
-**Hashtags**: #[tag1] #[tag2] #[tag3] #[tag4] #[tag5] #[tag6] #[tag7]
-**Instagram Alt-Text**: [Descriptive, SEO-rich visual description for accessibility]
+#### Strategic Hashtags (3-Tier Ladder)
+- **Broad Category**: #[tag1] #[tag2] #[tag3]
+- **Mid-Volume Niche**: #[tag4] #[tag5] #[tag6] #[tag7]
+- **Hyper-Specific / Branded**: #[tag8] #[tag9] #[tag10]
+
+#### Instagram SEO Alt-Text
+[Descriptive, keyword-rich visual description for accessibility and search indexing]
 ```
 
 ---
 
-## 6. Post-Brainstorming Workflow & Image Generation Loop
-
-Follow these exact steps after completing the brainstorm:
+## 7. Post-Brainstorming Workflow & Single-Image Generation Loop
 
 ```mermaid
 flowchart TD
     A["Present Brainstorming Blueprints"] --> B["Pause & Ask User: Confirm GENERATE or Request Edits"]
     B -->|User Requests Edits| C["Apply Revisions to Blueprints"]
     C --> B
-    B -->|User Confirms GENERATE| D["Generate 6 Images Sequentially (10s cooldown between each)"]
+    B -->|User Confirms GENERATE| D["Generate 6 Images Sequentially (Strictly 1 Final Version per Tile)"]
     D -->|503 or Capacity Error| R["Wait 35s & Retry up to 3x"]
     R --> D
     D -->|Success| E["Save Images & Compile captions.txt into Same Directory"]
@@ -136,58 +194,58 @@ flowchart TD
 ```
 
 ### Step 1: Brainstorming & Review Pause
-- Present the 3x2 Grid Matrix, color palette, font family, and all 6 tile blueprints.
+- Present the 3x2 Grid Matrix, color palette, font family, pre-drafting research, and all 6 tile blueprints.
 - **Stop and ask the user to confirm or request revisions**:
-  > *"Please review the brainstormed grid strategy and blueprints above. Reply with **GENERATE** to proceed with generating all 6 images natively, or let me know any revisions or adjustments you'd like to make."*
+  > *"Please review the brainstormed grid strategy, SEO captions, and blueprints above. Reply with **GENERATE** to proceed with generating all 6 images natively, or let me know any revisions or adjustments you'd like to make."*
 
 ### Step 2: Interactive Revision Loop
 - If the user requests corrections or changes:
-  1. Apply the revisions directly to the blueprints.
-  2. Maintain the visual rules (checkerboard rhythm, unified font family, product preservation, micro-copy under 8 words, safe margins).
+  1. Apply revisions directly to the blueprints.
+  2. Maintain visual rules, humanizer standards, and SEO funnel structure.
   3. Pause and ask the user again to confirm (`"GENERATE"`) or request further edits.
   4. Repeat this loop until the user approves.
 
-### Step 3: Native Sequential Image Generation & Retry Logic (Upon "GENERATE" Approval)
+### Step 3: Native Sequential Image Generation (Strictly 1 Image Per Tile)
 When the user approves with `"GENERATE"` (or equivalent confirmation):
 
-1. **Sequential Generation Only (Never in Parallel)**:
-   - Generate the 6 images one by one (Tile 1, then Tile 2, through Tile 6) in strict sequence.
-   - **Never launch multiple image generation calls concurrently or in parallel** to preserve API quota and prevent resource exhaustion.
-
-2. **Inter-Generation Cooldown**:
-   - Pause and wait **10 seconds** between each successful image generation before initiating the request for the next tile.
-
-3. **Built-in Capacity Retry Logic (`503` / `MODEL_CAPACITY_EXHAUSTED`)**:
-   - If an image generation request fails with a `503`, `MODEL_CAPACITY_EXHAUSTED`, rate limit, or temporary server overload error:
+1. **Strictly 1 Final Image Per Tile (No Candidate Variations)**:
+   - Generate **strictly 1 final image version per tile** (`tile_01.png` through `tile_06.png`).
+   - **Never generate multiple candidate variations, alternative drafts, or parallel batches per tile**, as this exhausts API capacity and slows down delivery.
+2. **Sequential Generation Only (Never in Parallel)**:
+   - Generate images one by one (Tile 1, then Tile 2, through Tile 6) in strict sequence.
+3. **Inter-Generation Cooldown**:
+   - Pause and wait **10 seconds** between each successful image generation before starting the next tile.
+4. **Built-in Capacity Retry Logic (`503` / `MODEL_CAPACITY_EXHAUSTED`)**:
+   - If an image generation request fails with a `503`, `MODEL_CAPACITY_EXHAUSTED`, or rate limit error:
      - **Do NOT abort or cancel the workflow.**
      - Pause and wait **35 seconds** (or the server's recommended retry delay if longer).
      - Retry the exact same failed image generation request.
      - Allow up to **3 retry attempts** per image tile before moving to the fallback flow below.
-
-4. **Directory Storage & Caption Compilation (Upon Success)**:
-   - Save the 6 generated images into a structured local directory on the user's machine (e.g., `<Artifact Directory Path>/generated_grid/` or `<Workspace>/generated_grid/`).
-   - **Compile All 6 Captions into a Single `captions.txt` File**:
-     - Inside that exact same image generation directory, write a single `captions.txt` file containing all 6 captions.
-     - Structure the file cleanly, ordered by reverse-chronological upload sequence (**Upload #1 through Upload #6**):
+5. **Directory Storage & Caption Compilation**:
+   - Save the 6 generated images into `<Artifact Directory Path>/generated_grid/` (or `<Workspace>/generated_grid/`).
+   - **Compile All 6 Captions into `captions.txt`**:
+     - Inside that exact same image generation folder, compile all 6 captions ordered by reverse-chronological upload sequence (**Upload #1 through Upload #6**):
        ```text
        ================================================================================
        UPLOAD #1 (TILE 6 - Bottom-Right)
        Title: [Catchy Tile Name]
+       Funnel Stage: [Bottom of Funnel / Direct Action]
        On-Image Text: "[Micro-Copy Text]"
        --------------------------------------------------------------------------------
-       CAPTION:
-       [Full Caption Text]
+       SEO HOOK & CAPTION:
+       [Full Humanized Caption Text]
        
-       HASHTAGS:
-       #[tag1] #[tag2] #[tag3] ...
+       STRATEGIC HASHTAGS (3-Tier Ladder):
+       Broad Category: #[tag1] #[tag2]
+       Mid-Volume Niche: #[tag3] #[tag4] #[tag5]
+       Hyper-Specific: #[tag6] #[tag7]
        
-       ALT-TEXT:
-       [Instagram SEO Alt-Text Description]
+       INSTAGRAM SEO ALT-TEXT:
+       [Descriptive SEO Alt-Text Description]
        ================================================================================
        ```
-
-5. **Local Path Display**:
-   - Once all 6 images are generated, clearly display the **exact local folder path** on the user's computer where the images and `captions.txt` are saved, along with clickable `file://` links for direct access.
+6. **Local Path Display**:
+   - Display the **exact local folder path** on the user's computer with clickable `file://` links for each image and `captions.txt`.
 
 ---
 
@@ -196,25 +254,11 @@ When the user approves with `"GENERATE"` (or equivalent confirmation):
 If automated image generation fails after all 3 retry attempts (or if no image generation tool/API key is available in the current environment):
 
 1. **Prompt the User with Graceful Fallback**:
-   - Do **NOT** abort or leave the user empty-handed.
    - Ask the user directly:
      > *"Image generation is currently unavailable after multiple attempts. Would you like me to export a complete downloadable blueprint so you can generate these 6 tiles in Gemini, ChatGPT, or Midjourney?"*
-
 2. **Generate `grid-blueprint.md` Upon User Confirmation**:
-   - When the user confirms (or requests the export):
-     - Create the local output directory (e.g., `<Artifact Directory Path>/generated_grid/` or `<Workspace>/generated_grid/`).
-     - Save `captions.txt` into that directory (ordered by Upload #1 to #6).
-     - Save a clean, self-contained Markdown file named **`grid-blueprint.md`** inside that same directory containing:
-       - **Global Campaign Specs**:
-         - Master color palette with Hex codes & 60-30-10 distribution rules.
-         - Typography specifications (single font family, weights, and hierarchies).
-         - Checkerboard rhythm map across rows 1 & 2.
-         - Instagram recommended aspect ratio (4:5 portrait `1080x1350` or 1:1 square `1080x1080`) with 10–15% safe margin rules.
-       - **Tile-by-Tile Generation Prompts (Tile 1 through Tile 6)**:
-         - Upload order badge and 3×2 grid coordinate.
-         - Composition style (Hero, Metaphor Placement, Human Element, Minimal Negative Space).
-         - Background tone (Dark vs Light).
-         - **Ready-to-use Image Generation Prompt**: A comprehensive, self-contained text prompt explicitly describing the anchor product, lighting, perspective, materials, scale, and background setting, optimized to be pasted directly into Gemini, ChatGPT (DALL-E 3), or Midjourney.
-         - On-image micro-copy (<6–8 words) and placement guide.
-         - Standalone Instagram caption, hashtags, and SEO Alt-Text.
-   - **Display Local Path**: Clearly display the exact local folder path on the user's computer and provide clickable `file://` links to both `grid-blueprint.md` and `captions.txt`.
+   - When confirmed, save `captions.txt` and a clean, self-contained Markdown file named **`grid-blueprint.md`** inside the local output directory containing:
+     - Global campaign specs (Hex palette, typography rules, checkerboard order, 4:5 / 1:1 aspect ratios, safe margin rules).
+     - Tile-by-tile copy-pasteable image generation prompts explicitly referencing the anchor product, lighting, perspective, materials, scale, and background setting for Gemini, ChatGPT (DALL-E 3), or Midjourney.
+     - On-image micro-copy and complete humanized SEO captions.
+   - Display the exact local folder path and clickable `file://` links to both `grid-blueprint.md` and `captions.txt`.

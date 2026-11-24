@@ -1,12 +1,14 @@
 # Sample Execution: Artisanal Coffee Roastery Grid
 
-This walkthrough demonstrates how `ig-grid-brainstorm` transforms a single anchor image into a complete, ready-to-produce 6-tile Instagram grid.
+This walkthrough demonstrates how `ig-grid-brainstorm` transforms a single anchor image into an SEO-engineered, humanized 6-tile Instagram campaign grid.
 
 ---
 
 ## Input
-- **Anchor Image**: Photo of a minimalist ceramic cup of pour-over coffee on a weathered oak wooden table beside roasted Ethiopian coffee beans in warm morning sunlight.
-- **Image Category**: Product & Lifestyle / Hospitality
+- **Anchor Image**: Photo of a minimalist ceramic cup of pour-over coffee on a weathered oak table beside roasted Ethiopian coffee beans in warm morning sunlight.
+- **Campaign Theme**: The Slow Pour Routine (Morning Specialty Coffee Ritual)
+- **Primary SEO Keyword**: `Specialty Coffee Roaster`
+- **Secondary Long-Tail Keywords**: `V60 brew ratio`, `Ethiopian washed beans`, `morning coffee ritual`
 
 ---
 
@@ -16,17 +18,18 @@ This walkthrough demonstrates how `ig-grid-brainstorm` transforms a single ancho
 - **Primary Dominant (60%)**: `#F5EFEB` (Warm Oat Canvas / Background)
 - **Secondary Structural (30%)**: `#2C221E` (Deep Espresso Roast / Typography & Framing)
 - **Accent Focal (10%)**: `#C67D5A` (Warm Terracotta / Badges & Highlight Accents)
-- **Dark Neutral**: `#181311` (Near-Black Roast for Body Text)
+- **Dark Neutral**: `#181311` (Near-Black Roast for Text)
 - **Light Neutral**: `#FAF7F2` (Cream Highlight / Inverted Cards)
 
-### Curated Typography Pairing
-- **Option A (Warm Editorial - Recommended)**:
-  - Headline: **Playfair Display** (Weight: 600 Semi-Bold, Tracking: `0px`)
-  - Subhead & On-Image Tags: **Plus Jakarta Sans** (Weight: 600 Semi-Bold, Uppercase, Tracking: `+1.8px`)
-  - Body Text / Captions: **Plus Jakarta Sans** (Weight: 400 Regular)
-- **Option B (Modern Minimalist)**:
-  - Headline: **Syne** (Weight: 700 Bold)
-  - Subhead / Body: **DM Sans** (Weight: 400 Regular)
+### Checkerboard Rhythm Plan
+- **Row 1**: Tile 1 (Dark) — Tile 2 (Light) — Tile 3 (Dark)
+- **Row 2**: Tile 4 (Light) — Tile 5 (Dark) — Tile 6 (Light)
+
+### Curated Typography Pairing (Single Font Family Rule)
+- **Font Family**: **Plus Jakarta Sans**
+  - Headlines: Bold 700 / Extra-Bold 800
+  - Micro-Copy / Badges: Semi-Bold 600, Uppercase, Tracking `+1.8px`
+  - Body / Captions: Regular 400
 
 ---
 
@@ -37,10 +40,12 @@ This walkthrough demonstrates how `ig-grid-brainstorm` transforms a single ancho
 |        TILE 1         |        TILE 2         |        TILE 3         |
 |  [The Morning Ritual] | [Origin & Bean Notes] | [Brew Guide (1:16)]   |  <-- ROW 1 (Top Row on Feed)
 |     (Upload #6)       |      (Upload #5)      |      (Upload #4)      |
+|  Background: Dark     |  Background: Light    |  Background: Dark     |
 +-----------------------+-----------------------+-----------------------+
 |        TILE 4         |        TILE 5         |        TILE 6         |
-|  ["Slow Down" Quote]  |  [Why Dark Roast Fails|  [Community Question] |  <-- ROW 2 (Bottom Row on Feed)
+|  [Notes on Craft]     |  [Why Dark Roast Burns|  [Tasting Room Bar]   |  <-- ROW 2 (Bottom Row on Feed)
 |     (Upload #3)       |      (Upload #2)      |      (Upload #1)      |
+|  Background: Light    |  Background: Dark     |  Background: Light    |
 +-----------------------+-----------------------+-----------------------+
 ```
 
@@ -60,145 +65,169 @@ This walkthrough demonstrates how `ig-grid-brainstorm` transforms a single ancho
 
 ### Tile 1: The Morning Ritual (Hero Launch)
 - **Grid Position**: Row 1, Column 1 (Top-Left) | **Upload Order**: Upload #6 of 6
-- **Content Angle**: Hero Statement / Mood Setter
+- **Funnel Stage**: Top of Funnel (Awareness & Primary SEO Hook)
+- **Composition Style**: Hero Shot (Ceramic cup centered, morning light, surreal miniature coffee flora around base)
+- **Background Tone**: Dark (`#2C221E` espresso background)
 
 #### Visual & Graphic Direction
-- **Composition**: Centered wide shot of the ceramic pour-over cup on the oak surface with soft morning light cast diagonally. Minimalist framing with generous oat-white negative space at the top.
-- **Color Distribution**: Canvas `#F5EFEB`, deep shadows `#2C221E`, ceramic rim accent `#C67D5A`.
-- **On-Image Text Overlay**:
-  - *Tagline*: `"THE RITUAL OF SLOW COFFEE"` (Plus Jakarta Sans, Semi-Bold, Uppercase, `#2C221E`)
-  - *Badge*: `SERIES 01 // ETHIOPIA YIRGACHEFFE` (Small uppercase tag, `#C67D5A`)
+- **Product Scale**: 90% full scale, exact cup and lighting angle preserved from anchor image.
+- **Micro-Copy Overlay**: `"SLOW DOWN YOUR MORNING POUR"` (6 words, Bold 700, Bottom-Center, `#FAF7F2`)
+- **Safe Margins**: Text anchored 15% above bottom border.
 
-#### Individual Caption
-**The best part of morning isn’t the caffeine. It’s the three minutes you refuse to rush.**
+#### SEO Hook & Humanized Caption
+**Finding a specialty coffee roaster that sources high-altitude washed beans changes how you start the day.**
 
-When you pour slow, water extracts floral jasmine notes that fast brewing destroys. Today's first cup: single-origin washed Yirgacheffe, roasted 48 hours ago in small batches.
+Three minutes with hot water and ground Ethiopian coffee brings out sweet jasmine notes. We roast in 8-kilo batches every Tuesday so the beans reach your door at peak aroma.
 
-Save this for your quiet Sunday morning routine.
+Save this post to revisit your weekend morning brew routine.
+
+#### Strategic Hashtags (3-Tier Ladder)
+- **Broad Category**: #SpecialtyCoffee #CoffeeAesthetic #SlowLiving
+- **Mid-Volume Niche**: #PouroverCoffee #MorningCoffeeRoutine #SingleOriginCoffee #HomeBarista
+- **Hyper-Specific / Branded**: #SlowCoffeeCo #WashedYirgacheffe #ArtisanPourOver
+
+#### Instagram SEO Alt-Text
+Hand-thrown ceramic cup of black pour-over coffee resting on a dark rustic oak table illuminated by warm morning sun.
 
 ---
-**Hashtags**: #SpecialtyCoffee #PouroverCoffee #SlowLiving #CoffeeAesthetic #MorningRitual #CoffeeRoasters #BaristaDaily  
-**Instagram Alt-Text**: Minimalist ceramic cup of pour-over black coffee on a warm rustic oak table illuminated by morning sunlight.
 
----
-
-### Tile 2: Anatomy of Origin (Macro Detail)
+### Tile 2: Anatomy of Origin (Craft & Technical Detail)
 - **Grid Position**: Row 1, Column 2 (Top-Center) | **Upload Order**: Upload #5 of 6
-- **Content Angle**: Macro Detail & Craftsmanship
+- **Funnel Stage**: Mid-Funnel (Craftsmanship & Feature-to-Benefit Translation)
+- **Composition Style**: Metaphor / Object Placement (Whole roasted beans nestled inside an antique brass balance scale)
+- **Background Tone**: Light (`#F5EFEB` warm oat canvas)
 
 #### Visual & Graphic Direction
-- **Composition**: Macro top-down detail shot of whole roasted coffee beans scattered on textured linen, highlighting natural bean seam and subtle golden oils.
-- **Color Distribution**: Deep espresso tones `#2C221E` dominating, with warm terracotta `#C67D5A` pointer lines pointing to key bean anatomy.
-- **On-Image Text Overlay**:
-  - *Headline*: `"TASTING NOTES: JASMINE & BERGAMOT"` (Playfair Display, 600 Semi-Bold, `#FAF7F2` over subtle dark vignette)
-  - *Subtext*: `ELEVATION: 2,100M // WASHED PROCESS` (Plus Jakarta Sans, `#F5EFEB`)
+- **Product Scale**: Scaled down to 40% inside scale pan, macro bean seam clarity preserved.
+- **Micro-Copy Overlay**: `"GROWN ABOVE 2,100 METERS"` (4 words, Semi-Bold 600, Top-Center, `#2C221E`)
+- **Safe Margins**: Scaled within 15% inner bounding box.
 
-#### Individual Caption
-**High elevation changes everything.**
+#### SEO Hook & Humanized Caption
+**High elevation slows bean growth and concentrates natural fruit sugars.**
 
-Grown above 2,100 meters, these beans develop denser sugars during cold mountain nights. The result in your cup isn't bitter roast—it's bright bergamot and delicate wildflower honey.
+Freezing night temperatures on Ethiopian mountains force the coffee cherry to develop density over extra months. In the cup, that density shows up as crisp bergamot and wild honey without bitterness.
 
-Have you tried light roast Ethiopian beans before, or do you prefer chocolatey profiles?
+Drop a comment with your favorite coffee origin to brew at home.
+
+#### Strategic Hashtags (3-Tier Ladder)
+- **Broad Category**: #CoffeeRoaster #ThirdWaveCoffee
+- **Mid-Volume Niche**: #EthiopianCoffee #CoffeeOrigins #SpecialtyCoffeeBeans #CoffeeEducation
+- **Hyper-Specific / Branded**: #YirgacheffeBeans #ElevationCoffee #SlowCoffeeOrigin
+
+#### Instagram SEO Alt-Text
+Top-down photograph of dense Ethiopian whole roasted coffee beans resting in a brass balance scale on linen cloth.
 
 ---
-**Hashtags**: #CoffeeBeans #SingleOrigin #EthiopianCoffee #CoffeeGeek #SpecialtyCoffeeRoaster #ThirdWaveCoffee #CoffeeNotes  
-**Instagram Alt-Text**: Close-up macro photograph of roasted Ethiopian coffee beans displaying fine seam textures on natural linen.
 
----
-
-### Tile 3: The Golden Ratio (Practical Guide)
+### Tile 3: The Golden Ratio (Action Guide & How-To)
 - **Grid Position**: Row 1, Column 3 (Top-Right) | **Upload Order**: Upload #4 of 6
-- **Content Angle**: Actionable Guide / Quick How-To
+- **Funnel Stage**: Mid-Funnel (Action Guide / High-Save Utility)
+- **Composition Style**: Human Element (Two hands pouring hot water from a gooseneck kettle in a steady spiral)
+- **Background Tone**: Dark (`#2C221E` deep espresso canvas)
 
 #### Visual & Graphic Direction
-- **Composition**: Clean, graphic aesthetic card with split layout. Left side shows goose-neck kettle pouring stream; right side displays clean typographic recipe block.
-- **Color Distribution**: Background card in `#F5EFEB`, border in subtle `#C67D5A`, text in `#181311`.
-- **On-Image Text Overlay**:
-  - *Headline*: `"THE 1:16 RATIO"` (Playfair Display, 700 Bold, `#2C221E`)
-  - *Steps Box*: `15G COFFEE ➔ 240G WATER ➔ 2:45 MIN` (Plus Jakarta Sans, Monospace style spacing)
+- **Product Scale**: 75% scale, live kettle steam caught in sunlight.
+- **Micro-Copy Overlay**: `"THE 1:16 GOLDEN BREW FORMULA"` (5 words, Bold 700, Top-Center, `#FAF7F2`)
+- **Safe Margins**: 15% side margins on kettle spout and text.
 
-#### Individual Caption
-**Stop guessing your water measurements.**
+#### SEO Hook & Humanized Caption
+**A reliable V60 brew ratio turns guesswork into consistent flavor every time.**
 
-The difference between sour, bitter, and sweet coffee is the 1:16 golden brew ratio:
-• 15g medium-fine ground coffee
-• 240g filtered water at 93°C
-• 45s bloom with 45g water, then steady spiral pours
+Here is the exact home formula:
+• 15g medium-fine coffee ground fresh
+• 240g filtered water heated to 93°C
+• 45g bloom for 40 seconds, followed by two steady spiral pours
 
-Hit save so you have this recipe handy next to your kettle tomorrow morning.
+Hit save so this recipe is ready on your counter tomorrow morning.
+
+#### Strategic Hashtags (3-Tier Ladder)
+- **Broad Category**: #CoffeeRecipe #BaristaDaily
+- **Mid-Volume Niche**: #V60Brew #CoffeeBrewing #PouroverGuide #HomeBaristaClub
+- **Hyper-Specific / Branded**: #V60Ratio #BrewWithSlowCoffee #PouroverRecipe
+
+#### Instagram SEO Alt-Text
+Barista hands using a copper kettle to pour filtered water over ground coffee in a ceramic dripper.
 
 ---
-**Hashtags**: #CoffeeRecipe #PouroverGuide #V60Brew #CoffeeTips #BaristaHacks #BrewCoffee #SpecialtyCoffeeCommunity  
-**Instagram Alt-Text**: Graphic recipe card showing a pour-over brew formula of 15 grams coffee to 240 grams water.
 
----
-
-### Tile 4: The Philosophy of Slowness (Mindset Quote)
+### Tile 4: Notes on Craft (Brand Authority & Philosophy)
 - **Grid Position**: Row 2, Column 1 (Bottom-Left) | **Upload Order**: Upload #3 of 6
-- **Content Angle**: Philosophy / Aesthetic Reflection
+- **Funnel Stage**: Brand Authority (Philosophy & Story)
+- **Composition Style**: Minimalist Negative Space (Small single cup placed lower-right, surrounded by 75% oat parchment space)
+- **Background Tone**: Light (`#F5EFEB` warm oat canvas)
 
 #### Visual & Graphic Direction
-- **Composition**: Pure typographic poster tile. Generous warm oat background (`#F5EFEB`) with delicate terracotta border line (`#C67D5A`). Elegant central quotation.
-- **Color Distribution**: 80% `#F5EFEB` negative space, 15% `#2C221E` headline typography, 5% `#C67D5A` motif star.
-- **On-Image Text Overlay**:
-  - *Quote*: `“Haste makes bitter what patience turns sweet.”` (Playfair Display, Italic 600, `#2C221E`)
-  - *Footer*: `NOTES ON CRAFT // VOL. 04` (Plus Jakarta Sans, Uppercase, `#C67D5A`)
+- **Product Scale**: Scaled down to 25%, generous negative space breathing room.
+- **Micro-Copy Overlay**: `"PATIENCE TASTES BETTER THAN HASTE"` (5 words, Semi-Bold 600, Center, `#2C221E`)
+- **Safe Margins**: Centered typography with 20% margin buffer.
 
-#### Individual Caption
-**In a world obsessed with instant everything, craft takes the time it takes.**
+#### SEO Hook & Humanized Caption
+**Good coffee takes four years to fruit and eight days to ship.**
 
-From waiting 4 years for a coffee tree to yield fruit, to roasting in 8-kilo batches monitored second by second. Respecting the process always tastes better.
+Rushing the roast cycle burns out subtle terroir. We monitor roasting curves by hand on small cast-iron drums because precision takes the time it takes.
 
-What is one part of your day you refuse to speed up?
+What is one part of your morning you refuse to rush?
+
+#### Strategic Hashtags (3-Tier Ladder)
+- **Broad Category**: #SlowLiving #MorningRoutine
+- **Mid-Volume Niche**: #ArtisanCraft #CoffeeCulture #MindfulMorning #RoasterLife
+- **Hyper-Specific / Branded**: #SlowCoffeeCraft #NotesOnRoasting #CraftCoffeeDaily
+
+#### Instagram SEO Alt-Text
+Minimalist design card featuring generous warm oat negative space and a small ceramic coffee cup in the corner.
 
 ---
-**Hashtags**: #SlowLivingMovement #MindfulMorning #ArtisanCraft #QuotesToLiveBy #AestheticVibes #IntentionalLiving #CoffeeCulture  
-**Instagram Alt-Text**: Minimalist typographic quote card reading 'Haste makes bitter what patience turns sweet' on oat parchment background.
 
----
-
-### Tile 5: The Roast Myth (Contrarian / Problem-Solver)
+### Tile 5: The Roast Myth (Conversion & Objection Handling)
 - **Grid Position**: Row 2, Column 2 (Bottom-Center) | **Upload Order**: Upload #2 of 6
-- **Content Angle**: Myth-Buster / Contrarian Insight
+- **Funnel Stage**: Conversion (Myth Debunking & Comparison)
+- **Composition Style**: Metaphor Placement (Contrasting dark burnt beans vs. cinnamon amber beans side-by-side in porcelain cups)
+- **Background Tone**: Dark (`#2C221E` deep espresso canvas)
 
 #### Visual & Graphic Direction
-- **Composition**: Split comparison visual. Left half shows oily dark roast bean under harsh light; right half shows balanced cinnamon-amber bean in warm sunlight.
-- **Color Distribution**: Contrast between near-black `#181311` on the left and warm amber `#C67D5A` on the right.
-- **On-Image Text Overlay**:
-  - *Headline*: `"DARK ISN'T STRONGER."` (Playfair Display, Bold Uppercase, `#FAF7F2`)
-  - *Subtext*: `DARK ROAST BURNS AWAY ORIGIN // LIGHT ROAST PRESERVES IT` (Plus Jakarta Sans, Bold, `#C67D5A`)
+- **Product Scale**: 60% scale comparison, identical soft directional morning lighting.
+- **Micro-Copy Overlay**: `"DARK ROAST DOES NOT MEAN STRONGER"` (6 words, Bold 700, Bottom-Center, `#FAF7F2`)
+- **Safe Margins**: 15% edge clearance.
 
-#### Individual Caption
-**Dark roast doesn't mean more caffeine. It usually just means overcooked beans.**
+#### SEO Hook & Humanized Caption
+**Over-roasting coffee beans hides poor green coffee behind ash and smoke.**
 
-When roasters burn beans past second crack, all regional terroir vanishes—leaving only ash and smoke. Light to medium roasting lets the fruit speak for itself.
+Roasting past second crack burns off the origin character. A medium roast preserves regional acidity while carrying rich chocolate and caramel notes without burnt bitterness.
 
-Drop a ☕ if you're team light roast, or a 🖤 if you still love dark roasts.
+Tap the link in bio to explore our current single-origin seasonal harvest.
+
+#### Strategic Hashtags (3-Tier Ladder)
+- **Broad Category**: #CoffeeLovers #CoffeeFacts
+- **Mid-Volume Niche**: #CoffeeRoasting #SpecialtyRoaster #CoffeeTaste #ThirdWaveCoffeeShop
+- **Hyper-Specific / Branded**: #MediumRoastCoffee #OriginTaste #SlowRoastStandards
+
+#### Instagram SEO Alt-Text
+Split visual showing an over-roasted dark coffee bean beside a vibrant light-medium roast bean.
 
 ---
-**Hashtags**: #CoffeeDebate #CoffeeFacts #CoffeeMyths #RoastingCoffee #SpecialtyCoffeeDaily #CoffeeEducation #CoffeeTaste  
-**Instagram Alt-Text**: Comparison graphic contrasting an oily dark roasted coffee bean against a vibrant light roasted bean.
 
----
-
-### Tile 6: The Roastery Table (Community Conversation)
+### Tile 6: The Tasting Room (Community & Direct CTA)
 - **Grid Position**: Row 2, Column 3 (Bottom-Right) | **Upload Order**: Upload #1 of 6
-- **Content Angle**: Community Discussion & Engagement
+- **Funnel Stage**: Bottom of Funnel (Community & Direct Conversion)
+- **Composition Style**: Human Element (Hands passing a freshly brewed cup across a sunlit oak counter beside retail bags)
+- **Background Tone**: Light (`#F5EFEB` warm oat canvas)
 
 #### Visual & Graphic Direction
-- **Composition**: Warm lifestyle environmental shot of the cafe counter with sunlight streaming across customer cups and fresh bags of roasted beans.
-- **Color Distribution**: Deep wood tones `#2C221E`, warm sunlight highlights `#FAF7F2`, packaging label `#C67D5A`.
-- **On-Image Text Overlay**:
-  - *Headline*: `"PULL UP A CHAIR."` (Playfair Display, 600 Semi-Bold, `#FAF7F2`)
-  - *Question Tag*: `WHAT’S IN YOUR CUP THIS WEEK?` (Plus Jakarta Sans, Uppercase, `#F5EFEB`)
+- **Product Scale**: 80% scale, warm environmental café ambiance.
+- **Micro-Copy Overlay**: `"PULL UP A CHAIR WITH US"` (6 words, Bold 700, Bottom-Center, `#2C221E`)
+- **Safe Margins**: 15% clearance on retail bags and counter edge.
 
-#### Individual Caption
-**Coffee was never meant to be consumed in isolation.**
+#### SEO Hook & Humanized Caption
+**Fresh bags of our washed Ethiopian Yirgacheffe are resting on the bar counter.**
 
-Our tasting room bar opens at 7 AM tomorrow with fresh roasts on the hopper. If you can’t make it in person, our single-origin sample boxes ship worldwide this Friday.
+Our roastery doors open at 7 AM tomorrow. If you live outside our city, our subscription boxes ship within 48 hours of roasting so your pantry never runs out of fresh beans.
 
-Tell us in the comments: what brew method are you starting tomorrow with?
+Tell us what brew method you are starting tomorrow with in the comments.
 
----
-**Hashtags**: #CoffeeCommunity #LocalRoaster #CoffeeLoversClub #CafeAesthetic #MorningVibes #CoffeeAddict #ShopLocalCoffee  
-**Instagram Alt-Text**: Sunlit artisanal coffee shop counter featuring fresh bags of beans and ceramic cups ready for morning service.
+#### Strategic Hashtags (3-Tier Ladder)
+- **Broad Category**: #LocalCoffee #CoffeeCommunity
+- **Mid-Volume Niche**: #CoffeeSubscription #CoffeeShopVibes #FreshRoastedCoffee #CafeCulture
+- **Hyper-Specific / Branded**: #SlowCoffeeTastingRoom #RoasteryBar #FreshRoastMornings
+
+#### Instagram SEO Alt-Text
+Morning sunlight shining across an oak coffee bar counter with fresh bags of specialty coffee and hot pour-over cups.
