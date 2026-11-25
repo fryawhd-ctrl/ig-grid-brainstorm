@@ -2,6 +2,8 @@
 
 This reference provides 6 category-agnostic conceptual tools to invent wildly distinct, surprising visual compositions from any single physical product—whether consumer tech, fashion, skincare, luxury goods, home decor, or everyday carry.
 
+For granular spatial variance and structural mechanics, see **[visual-benchmarks.md](./visual-benchmarks.md)**.
+
 ---
 
 ## The Anti-Repetition Rule (Non-Negotiable)
@@ -17,10 +19,11 @@ If Tile 1 is a macro close-up with curved text, Tile 2 must use a wide perspecti
 These lenses are non-sequential. Mix, match, and freely assign them across the 6 tiles without rigid category templates or fixed tile slots:
 
 ### 1. Scale & Physics Distortion
-- **Concept**: Treat the product as a giant architectural monument interacted with by miniature 1-inch human figures, or suspend it in mid-air defying gravity.
+- **Concept**: Treat the product as a giant architectural monument interacted with by miniature 1-inch human figures, suspend it in mid-air in zero gravity, or multiply it into floating geometric clusters.
 - **Visual Staging**:
   - Miniature construction workers or mountaineers scaling the metallic volume dial or zipper pull of the product.
   - The product suspended motionless in a zero-gravity vacuum with kinetic motion blur or light rays bending around it.
+  - Multiplication / Crowd Density: Multiple units repeating in a clean geometric grid floating in space (never on a tabletop).
 - **Metaphor Role**: Amplifies monumental presence, precision engineering, or supernatural weightlessness.
 
 ---
@@ -38,7 +41,7 @@ These lenses are non-sequential. Mix, match, and freely assign them across the 6
 - **Visual Staging**:
   - Motion-caught fingers pulling the item from a dark trench coat pocket against a saturated background.
   - Two hands tossing or catching the object in mid-stride under sharp directional lighting.
-- **Metaphor Role**: Injects tactile intimacy, visceral human scale, and real-world tension into avant-garde art direction.
+- **Metaphor Role**: Injects tactile intimacy, visceral human scale, and real-world utility without visible faces.
 
 ---
 
@@ -47,22 +50,23 @@ These lenses are non-sequential. Mix, match, and freely assign them across the 6
 - **Visual Staging**:
   - Circular halo type following the contour of the product in a dynamic curve.
   - Split top-and-bottom punchline text framing the product from above and below.
-  - Massive, full-bleed graphic letters running behind the product, with the physical object casting real shadows across the letterforms.
+  - Massive, full-bleed graphic letters running behind the product (Z-axis layer interlock), with the physical object casting real shadows across the letterforms.
 - **Metaphor Role**: Fuses Swiss poster graphic design with three-dimensional photography.
 
 ---
 
 ### 5. Screen-Native & UI Play
-- **Concept**: Collide physical reality with digital screen language and mobile UI culture.
+- **Concept**: Collide physical reality with digital screen language, mobile UI culture, or 2.5D extrusion.
 - **Visual Staging**:
   - A translucent digital chat bubble or push notification banner hovering beside the product.
   - A flashing "1% Battery" bar, an audio waveform graphic, or iOS system toggle interacting with the physical surface.
+  - Hero object breaking out of a 2D interface frame into the 3D foreground plane.
 - **Metaphor Role**: Connects the physical object to digital dopamine, notifications, and social habits.
 
 ---
 
 ### 6. Extreme Negative Space Whisper
-- **Concept**: Shrink the product so it occupies **less than 15% of the frame**, surrounded by 85%+ uninterrupted negative space.
+- **Concept**: Micro-isolate the product so it occupies **less than 15% of the frame** (or 12%–20% inside a miniature vessel), surrounded by 80%–85%+ uninterrupted negative space.
 - **Visual Staging**:
   - A tiny, solitary silhouette of the product anchored in the lower corner of a vast, monochrome canvas.
   - Paired with a microscopic 2–4 word witty caption floating in the open void.

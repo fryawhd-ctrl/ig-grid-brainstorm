@@ -71,7 +71,7 @@ flowchart TD
 ```
 
 1. **Step 1 (Research)**: Research live trending keywords, search intent, and niche hashtags.
-2. **Step 2 (Visual Blueprints)**: Reference [`references/visual-rules.md`](./references/visual-rules.md) and [`references/grid-archetypes.md`](./references/grid-archetypes.md) to define color palette, typography architecture, and 6 surreal concepts.
+2. **Step 2 (Visual Blueprints)**: Reference [`references/visual-rules.md`](./references/visual-rules.md), [`references/grid-archetypes.md`](./references/grid-archetypes.md), and [`references/visual-benchmarks.md`](./references/visual-benchmarks.md) to define color palette, typography architecture, spatial mechanics, and 6 surreal concepts.
 3. **Step 3 (SEO & Humanized Copy)**: Reference [`references/seo-copy-rules.md`](./references/seo-copy-rules.md), enforce `humanizer` + `no-ai-slop`, and draft on-image micro-copy (<6 words) + 6-post funnel captions.
 4. **Step 4 (Autonomous QC & Confirmation Gate)**:
    - Evaluates internal compliance against [`references/quality-control.md`](./references/quality-control.md).
@@ -95,6 +95,7 @@ ig-grid-brainstorm/
 ├── references/
 │   ├── quality-control.md            # Autonomous self-audit rubric, gates, and self-healing directives
 │   ├── visual-rules.md               # Avant-garde art direction, checkerboard, scale, typography
+│   ├── visual-benchmarks.md          # Structural DNA, spatial mechanics, and graphic devices
 │   ├── seo-copy-rules.md             # Keyword research, funnel narrative, 3-tier tags, anti-slop
 │   ├── fallback-blueprint.md         # Universal direct export template (Midjourney, ChatGPT, Gemini, Flux)
 │   ├── grid-archetypes.md            # 6 Universal Conceptual Lenses for avant-garde art direction

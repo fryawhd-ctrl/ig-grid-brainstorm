@@ -77,11 +77,11 @@ flowchart TD
 3. *Offline Fallback*: Extract core category nouns, high-intent modifier phrases, and solution hooks from domain knowledge.
 
 ### Step 2: Avant-Garde Visual Blueprints & Prompt Preparation
-1. Read **[references/visual-rules.md](./references/visual-rules.md)** and **[references/grid-archetypes.md](./references/grid-archetypes.md)**.
+1. Read **[references/visual-rules.md](./references/visual-rules.md)**, **[references/grid-archetypes.md](./references/grid-archetypes.md)**, and **[references/visual-benchmarks.md](./references/visual-benchmarks.md)**.
 2. Formulate 6 distinct surreal visual concepts adhering strictly to:
    - **Strict 2–3 Color Palette**: Extracted directly from the anchor product (1 dominant dark/saturated, 1 light/clean space, 1 accent).
    - **Checkerboard Rhythm**: Strict dark/light contrast alternation across rows 1 & 2.
-   - **Extreme Scale Shifts**: From full-bleed macro to <15% product scale surrounded by vast negative space.
+   - **Extreme Scale Shifts**: From full-bleed macro (110%–130%) to micro isolation (<15% product scale in vast negative space). Standard anchor (40%–55%) is limited to at most 1 tile and off-table/suspended.
    - **Typography as Graphic Design**: Varied dynamic layout per tile (curved type, split top/bottom, UI badges, overlapping type) using **one font family**.
    - **Safe Margins**: 10–15% buffer inside outer borders.
 3. **Downstream Prompt Instructions**: Ensure prompts explicitly preserve the surreal scale, typography geometry, and visual metaphor from this step rather than simplifying them into generic studio photography prompts.
@@ -105,7 +105,7 @@ flowchart TD
      2. *Strict 3×2 Composition*: Exactly 6 tiles mapped across Row 1 (Tiles 1-3) & Row 2 (Tiles 4-6) with reverse-chronological upload order (Upload #1 ➔ Tile 6).
      3. *Full Captions Mandatory*: Every single tile (1 to 6) has an opening hook (<125 chars), value narrative, CTA, 8–12 three-tier hashtags, and Alt-Text. Zero placeholders or truncated summaries.
      4. *Checkerboard Contrast*: Adjacent tiles strictly alternate background tone (Row 1: Dark-Light-Dark, Row 2: Light-Dark-Light).
-     5. *Surreal Metaphor & Scale*: Zero repeated tabletop setups; at least one <15% scale negative-space tile.
+     5. *Surreal Metaphor & Scale*: Zero repeated tabletop setups; at least one <15% scale negative-space tile; Standard Anchor at most once and off-table.
      6. *Micro-Copy & Anti-Slop*: On-image copy strictly under 6 words; zero banned AI buzzwords or binary contrasts.
    - *Self-Healing Directive*: If any check fails, silently regenerate the violating tile or caption before presenting to the user.
 2. **Present Verified Blueprints**: Present the master visual system, 3x2 matrix map, and 6 complete post blueprints.
@@ -138,8 +138,9 @@ When the user confirms with `"GENERATE"` (or asks to create the assets):
 
 - **[Quality Control Rubric](./references/quality-control.md)**: Autonomous self-audit gates, anti-skipping rules, and self-healing directives.
 - **[Visual Rules](./references/visual-rules.md)**: Avant-garde art direction, checkerboard contrast, scale variance, and graphic typography.
+- **[Visual Benchmarks](./references/visual-benchmarks.md)**: Structural DNA, spatial mechanics, physical metaphors, and graphic device library.
+- **[Grid Archetypes](./references/grid-archetypes.md)**: 6 Universal Conceptual Lenses for avant-garde art direction.
 - **[SEO & Copy Rules](./references/seo-copy-rules.md)**: Web keyword research, funnel narrative, 3-tier hashtags, humanizer / no-ai-slop rules, and `captions.txt` template.
 - **[Universal Direct Blueprint](./references/fallback-blueprint.md)**: Direct export template for external image generators (Midjourney, ChatGPT, Gemini, Flux).
 - **[Typography Pairings](./references/typography-pairings.md)**: Curated font pairings by aesthetic mood.
-- **[Grid Archetypes](./references/grid-archetypes.md)**: 6 Universal Conceptual Lenses for avant-garde art direction.
 - **[Sample Grid Output](./examples/sample-grid-output.md)**: End-to-end minimalist wireless headphones campaign demonstration.
