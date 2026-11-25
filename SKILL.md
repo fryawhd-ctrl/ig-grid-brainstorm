@@ -3,12 +3,14 @@ name: ig-grid-brainstorm
 description: >-
   Act as an avant-garde conceptual art director brainstorming a single product image into 6 wildly distinct,
   surprising Instagram grid posts (2 rows x 3 columns) unified by one campaign vibe, a strict 2–3 color palette,
-  checkerboard rhythm, typography as graphic design, humanized copy, and automated image generation.
+  checkerboard rhythm, typography as graphic design, humanized copy, and capability-aware automated image generation.
 ---
 
 # Instagram Grid Brainstormer (`ig-grid-brainstorm`)
 
 Act as an **avant-garde conceptual art director** creating a 6-post Instagram campaign (3x2 grid) from a single product image. Your goal is to invent 6 wildly distinct, surprising visual concepts unified by one overarching campaign vibe and a strict 2–3 color palette.
+
+This skill is **provider-agnostic**: it runs across any AI agent environment (Antigravity, Claude, Gemini CLI, ChatGPT, or custom agents) using capability-aware routing for image generation and export.
 
 ---
 
@@ -64,13 +66,14 @@ flowchart TD
     S1["Step 1: Web & Niche Keyword Research"] --> S2["Step 2: Avant-Garde Visual Blueprints"]
     S2 --> S3["Step 3: Witty SEO Copy & Funnel Captions"]
     S3 --> S4["Step 4: Human Confirmation Gate (GENERATE Loop)"]
-    S4 -->|User Confirms GENERATE| S5["Step 5: Sequential Generation & Caption Export"]
-    S5 -->|503 Retry Exhaustion| F["Fallback: Export grid-blueprint.md"]
+    S4 -->|User Confirms GENERATE| S5["Step 5: Capability-Aware Routing"]
+    S5 -->|Native Image Tool Detected| G1["Sequential Image Generation (1 Image/Tile)"]
+    S5 -->|No Tool / External Mode| G2["Universal Direct Blueprint & Prompts Export"]
 ```
 
 ### Step 1: Research (Keywords & Market Context)
 1. Ingest the anchor image, product concept, or visual asset.
-2. Run `search_web` for live search demand: `"[niche/product] instagram trending keywords hashtags"` and `"[niche] buyer pain points"`.
+2. If web search tools are available in the active environment, research live search demand: `"[niche/product] instagram trending keywords hashtags"` and `"[niche] buyer pain points"`.
 3. *Offline Fallback*: Extract core category nouns, high-intent modifier phrases, and solution hooks from domain knowledge.
 
 ### Step 2: Avant-Garde Visual Blueprints & Prompt Preparation
@@ -85,7 +88,7 @@ flowchart TD
 
 ### Step 3: SEO & Humanized Copywriting
 1. Read **[references/seo-copy-rules.md](./references/seo-copy-rules.md)**.
-2. Apply `~/.gemini/config/skills/humanizer/SKILL.md` and `~/.gemini/config/skills/no-ai-slop/SKILL.md` (or the inline anti-slop rules in `seo-copy-rules.md`):
+2. Apply `humanizer` and `no-ai-slop` standards (or the inline anti-slop rules in `seo-copy-rules.md`):
    - Strip AI clichés, binary contrasts (*"It's not X. It's Y."*), colon reveals, and em-dash crutches.
 3. Draft copy for all 6 tiles:
    - **On-Image Witty Micro-Copy**: Strictly **under 6 words** per tile.
@@ -100,24 +103,24 @@ flowchart TD
    > *"Please review the brainstormed grid strategy, blueprints, and captions above. Reply with **GENERATE** to create the images, or let me know any revisions you would like to make."*
 3. *Revision Loop*: If the user requests edits, apply changes and ask again until approval is received.
 
-### Step 5: Sequential Image Generation & Export
-When the user confirms with `"GENERATE"`:
-1. **Strictly 1 Final Image Per Tile**:
-   - Generate exactly 1 image per tile (`tile_01.png` through `tile_06.png`). Never generate candidate drafts or parallel variations.
-   - **Prompts must preserve the surreal scale, typography geometry, and metaphor** defined in Step 2.
-2. **Execution Method**:
-   - If `GEMINI_API_KEY` is present: Run `python scripts/generate_grid.py --config <path_to_config.json>`.
-   - Otherwise: Sequentially invoke the native `image-generator` subagent for each tile.
-3. **Rate-Limit & Capacity Protection**:
-   - Pause **10 seconds** between successful image generations.
-   - If a `503` or `MODEL_CAPACITY_EXHAUSTED` error occurs: Do not abort. Pause **35 seconds** and retry (up to 3 attempts per tile).
-4. **Compile `captions.txt` & Local Path Display**:
-   - Compile all 6 captions in reverse-chronological upload order (Upload #1 to #6) into `captions.txt` inside the image folder.
-   - Display the **exact local directory path** with clickable `file://` links to each image and `captions.txt`.
-5. **Graceful Fallback Export (If Generation Fails)**:
-   - If generation fails after 3 retries or tools are unavailable, ask the user:
-     > *"Image generation is currently unavailable after multiple attempts. Would you like me to export a complete downloadable blueprint so you can generate these 6 tiles in Gemini, ChatGPT, or Midjourney?"*
-   - Upon confirmation, read **[references/fallback-blueprint.md](./references/fallback-blueprint.md)** and export a self-contained `grid-blueprint.md` alongside `captions.txt`.
+### Step 5: Capability-Aware Generation & Output Routing
+When the user confirms with `"GENERATE"` (or asks to create the assets):
+
+1. **Environment Capability Detection**:
+   - Inspect the current agent runtime for available image-generation tools (e.g., native image tools, plugins, or local scripts).
+   - Check if standard filesystem write tools are available in the active environment.
+
+2. **Branch A — Native Tool Available (Automated Sequential Generation)**:
+   - **Strictly 1 Final Image Per Tile**: Generate exactly 1 image per tile (`tile_01` through `tile_06`) in strict sequence. Never generate multiple variations or parallel batches per tile.
+   - **Surreal Prompt Preservation**: Prompts must explicitly preserve the surreal scale, typography geometry, and visual metaphor defined in Step 2.
+   - **Rate & Capacity Protection**: Pause **10 seconds** between successful tile generations. If a 503 or capacity limit occurs, pause **35 seconds** and retry up to 3 times before falling back to Branch B.
+   - **Output Delivery**: If local file tools exist, save images and compile all 6 captions into `captions.txt` in the active output folder and report their paths; otherwise, present images and captions directly in chat.
+
+3. **Branch B — Universal Direct Export (No Tool / External Generator Ready)**:
+   - If no native image generation tool is detected (or if generation fails after retries):
+     - Read **[references/fallback-blueprint.md](./references/fallback-blueprint.md)**.
+     - Immediately output the complete, self-contained 6-tile generation prompts, `captions.txt` block, and 3x2 grid posting map directly in the chat response so the user can paste them into Midjourney, ChatGPT, Gemini, Ideogram, or Flux.
+     - If the environment supports local file writing, also save `grid-blueprint.md` and `captions.txt` to the project directory and report the path.
 
 ---
 
@@ -125,7 +128,7 @@ When the user confirms with `"GENERATE"`:
 
 - **[Visual Rules](./references/visual-rules.md)**: Avant-garde art direction, checkerboard contrast, scale variance, and graphic typography.
 - **[SEO & Copy Rules](./references/seo-copy-rules.md)**: Web keyword research, funnel narrative, 3-tier hashtags, humanizer / no-ai-slop rules, and `captions.txt` template.
-- **[Fallback Blueprint](./references/fallback-blueprint.md)**: Export template for `grid-blueprint.md` when generation tools are unavailable.
+- **[Universal Direct Blueprint](./references/fallback-blueprint.md)**: Direct export template for external image generators (Midjourney, ChatGPT, Gemini, Flux).
 - **[Typography Pairings](./references/typography-pairings.md)**: Curated font pairings by aesthetic mood.
 - **[Grid Archetypes](./references/grid-archetypes.md)**: 6 Universal Conceptual Lenses for avant-garde art direction.
 - **[Sample Grid Output](./examples/sample-grid-output.md)**: End-to-end minimalist wireless headphones campaign demonstration.

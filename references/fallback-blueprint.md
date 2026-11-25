@@ -1,64 +1,64 @@
-# Fallback Blueprint Export Template (`grid-blueprint.md`)
+# Universal Blueprint & Direct Export Template
 
-This template defines the structure of the standalone Markdown file `grid-blueprint.md` generated when automated image generation fails after retry attempts or when an API key is unavailable.
-
----
-
-## Output Path & Placement
-Save `grid-blueprint.md` alongside `captions.txt` in the local output directory:
-- `<Artifact Directory Path>/generated_grid/grid-blueprint.md` (or `<Workspace>/generated_grid/grid-blueprint.md`)
+This reference defines the provider-agnostic output package used when an environment does not support native image generation, when generation tools are unavailable, or when the user wants ready-to-run prompts for external tools (Midjourney, ChatGPT / DALL-E 3, Gemini / Imagen, Ideogram, Flux).
 
 ---
 
-## File Contents Template
+## Output Delivery Methods
+
+Depending on the active agent runtime:
+- **Chat-First Output (Universal)**: Output this complete blueprint and the `captions.txt` code block directly in the conversation response so the user can immediately copy-paste prompts into their preferred generator.
+- **File Export (When Supported)**: If the environment supports local file writing (`write_file`, artifacts, or workspace exports), save this document as `grid-blueprint.md` and save the captions as `captions.txt` in the active project/output directory.
+
+---
+
+## Universal Campaign Blueprint Schema
 
 ```markdown
-# 6-Tile Instagram Grid Campaign Blueprint
+# 6-Tile Instagram Campaign Blueprint
 
-Use this complete blueprint to generate the 6 matching tiles in Gemini, ChatGPT (DALL-E 3), Midjourney, or design tools (Canva/Figma).
+Use these self-contained visual prompts and captions to generate your 6-tile grid in Midjourney, ChatGPT, Gemini, Ideogram, or Flux.
 
 ---
 
 ## 1. Global Campaign Specifications
 
 - **Campaign Theme**: [Overarching Campaign Narrative]
-- **Aspect Ratio**: 4:5 Vertical (`1080x1350 px`) with 1:1 Square Center-Crop Safe Area (`1080x1080 px`)
-- **Safe Margins**: Keep all product silhouettes, text overlays, and badges at least 10–15% inside borders.
+- **Aspect Ratio**: 4:5 Vertical (`1080x1350 px`) with central 1:1 Square Safe Area (`1080x1080 px`)
+- **Safe Margins**: All key visual elements, text overlays, and product silhouettes kept 10–15% inside borders.
 
-### Extracted 5-Color Palette (60-30-10 Rule)
-- **Primary Dominant (60%)**: `[#HEX]` (Canvas Foundation)
-- **Secondary Structural (30%)**: `[#HEX]` (Frames, Shadows, Accents)
-- **Accent Focal (10%)**: `[#HEX]` (Badges & Highlight Pops)
-- **Dark Neutral**: `[#HEX]` (Text on light tiles)
-- **Light Neutral**: `[#HEX]` (Text on dark tiles)
+### Master 2–3 Color Palette (Strict Family)
+- **Dominant Saturated Dark (60%)**: `[#HEX]` (Deep contrast / shadow tone)
+- **Clean Light Canvas (30%)**: `[#HEX]` (Negative space / airy canvas tone)
+- **Graphic Accent (10%)**: `[#HEX]` (Electric pop for badges and typographic punch)
 
-### Checkerboard Grid Layout Plan
+### Checkerboard Grid Layout Rhythm
 - **Row 1**: Tile 1 (Dark) — Tile 2 (Light) — Tile 3 (Dark)
 - **Row 2**: Tile 4 (Light) — Tile 5 (Dark) — Tile 6 (Light)
 
 ### Unified Typography Specs
-- **Font Family**: [Single Font Family Name, e.g. Plus Jakarta Sans]
-- **Headline**: Bold (700) or Extra-Bold (800)
-- **Micro-Copy Overlay**: Semi-Bold (600), Uppercase, tracking `+1.5px`
-- **Caption / Body**: Regular (400)
+- **Font Family**: [Single Font Family, e.g., Plus Jakarta Sans / Space Grotesk]
+- **Contrast**: Built through extreme weight shifts (Heavy 800 vs. Regular 400).
 
 ---
 
-## 2. 3x2 Profile Grid Map & Posting Schedule
+## 2. 3x2 Profile Grid Map & Posting Order
 
 ```text
 +-----------------------+-----------------------+-----------------------+
 |        TILE 1         |        TILE 2         |        TILE 3         |
-|  [Hero Launch]        |  [Craft & Anatomy]    |  [Action How-To]      |  <-- ROW 1 (Top Row on Feed)
-|     (Upload #6)       |      (Upload #5)      |      (Upload #4)      |
+|  [Top-Left]           |  [Top-Center]         |  [Top-Right]          |  <-- ROW 1 (Top Row on Feed)
+|  (Upload #6)          |  (Upload #5)          |  (Upload #4)          |
+|  Background: Dark     |  Background: Light    |  Background: Dark     |
 +-----------------------+-----------------------+-----------------------+
 |        TILE 4         |        TILE 5         |        TILE 6         |
-|  [Brand Philosophy]   |  [Objection Debunk]   |  [Community CTA]      |  <-- ROW 2 (Bottom Row on Feed)
-|     (Upload #3)       |      (Upload #2)      |      (Upload #1)      |
+|  [Bottom-Left]        |  [Bottom-Center]      |  [Bottom-Right]       |  <-- ROW 2 (Bottom Row on Feed)
+|  (Upload #3)          |  (Upload #2)          |  (Upload #1)          |
+|  Background: Light    |  Background: Dark     |  Background: Light    |
 +-----------------------+-----------------------+-----------------------+
 ```
 
-### Posting Schedule (Reverse-Chronological)
+### Reverse-Chronological Upload Sequence
 1. **Upload #1** ➔ **Tile 6** (Bottom-Right)
 2. **Upload #2** ➔ **Tile 5** (Bottom-Center)
 3. **Upload #3** ➔ **Tile 4** (Bottom-Left)
@@ -68,32 +68,33 @@ Use this complete blueprint to generate the 6 matching tiles in Gemini, ChatGPT 
 
 ---
 
-## 3. Tile-by-Tile Generation Prompts & Copy
+## 3. Tile-by-Tile Generation Prompts & SEO Copy
 
 ### Tile [N]: [Catchy Tile Name]
 - **Grid Position**: Row [X], Column [Y] | **Upload Order**: Upload #[M] of 6
-- **Funnel Stage**: [Awareness / Craft / How-To / Philosophy / Objection / Community CTA]
-- **Composition Style**: [Hero Shot / Metaphor Placement / Human Element / Minimal Negative Space]
+- **Funnel Stage**: [Top of Funnel / Mid-Funnel Craft / Action Guide / Philosophy / Objection / Community CTA]
+- **Conceptual Lens**: [Scale & Physics / Container Swap / Kinetic Human / Typographic Architecture / Screen UI / Negative Space Whisper]
 - **Background Tone**: [Dark / Light] (Checkerboard Rhythm)
 
-#### Copy-Pasteable Image Generation Prompt (Gemini / ChatGPT / Midjourney)
+#### Copy-Pasteable Image Generation Prompt
 ```text
-[Detailed prompt describing:
-1. Product Fidelity: The exact product subject, materials, surface textures, and reflections matching the reference image.
-2. Surreal Metaphor & Setting: Preserves the exact surreal scale, physical interactions, and unexpected environment from the concept (e.g. suspended mid-air, embedded in a ring box, miniature diorama, or floating in 80% negative space). Do NOT simplify into generic tabletop or studio product photography.
-3. Typography & Graphic Placement: Notes typography geometry if rendered directly (e.g. curved type, split punchline, or UI badge).
-4. Color & Contrast: Strict 2-3 color palette enforcement with exact hex values ([#HEX] dark/saturated tone vs [#HEX] light/clean space for checkerboard rhythm).
-5. Aspect ratio & margins: --ar 4:5 (portrait 1080x1350) with 10-15% safe inner margin.]
+[Universal Prompt formatted for Midjourney / ChatGPT / Gemini / Flux:
+1. Product Fidelity: The exact physical product subject, materials, surface finish, colors, and proportions matching the reference asset.
+2. Surreal Metaphor & Staging: Explicitly preserves the surreal scale, gravity-defying physics, or unexpected environment (e.g. suspended mid-air in zero-G, shrunk inside an emergency glass box, or scaled to <15% in vast negative space). Never simplify into generic tabletop or studio photography.
+3. Typography & Graphic Layout: Specifies graphic text placement if rendered directly (curved halo, split punchline, floating UI banner, or overlapping letters).
+4. Color Atmosphere: Exact hex color values ([#HEX] dark tone vs [#HEX] light tone).
+5. Aspect Ratio & Lighting: 4:5 vertical portrait framing, sharp cinematic directional lighting, clean 15% inner margins.
+--ar 4:5]
 ```
 
 #### On-Image Micro-Copy Overlay
-- **Text**: `"[Witty micro-copy under 6 words]"`
-- **Graphic Placement**: [Curved around object / Split top-and-bottom / In UI chat bubble / Overlapping background type], [Font Family], [Font Weight], [Hex Color]
+- **Text**: `"[Witty copy strictly under 6 words]"`
+- **Graphic Placement**: [Curved around object / Split top-and-bottom / In UI chat bubble / Overlapping background type]
 
 #### SEO Hook & Humanized Caption
-**[Opening Hook Line <125 characters with primary keywords]**
+**[Opening Hook Line <125 characters with primary keywords before the fold]**
 
-[1-3 concise, punchy paragraphs with zero AI slop]
+[1-3 concise, punchy paragraphs with zero AI slop, delivering specific value]
 
 [Clear single-action CTA]
 
