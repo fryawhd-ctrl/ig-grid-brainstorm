@@ -1,6 +1,6 @@
 # Instagram SEO, Funnel & Copywriting Rules
 
-This reference defines the keyword research strategy, campaign funnel narrative, hashtag architecture, and anti-AI-slop writing standards for drafting on-image micro-copy and Instagram captions.
+This reference defines the keyword research strategy, universal fact-grounding, campaign funnel narrative, hashtag architecture, and anti-AI-slop writing standards for drafting on-image micro-copy and Instagram captions.
 
 ---
 
@@ -19,7 +19,47 @@ Before drafting any copy, research search terms that Instagram users and buyers 
 
 ---
 
-## 2. Campaign Funnel Narrative Across the 6 Tiles
+## 2. Universal Fact-Grounding & Claim Verification Gate
+
+Surreal art direction demands bold visual metaphors, but **marketing copy, headlines, micro-copy, and Alt-Text must remain 100% factually grounded, accurate, and truthful.**
+
+### 1. Separate Visual Metaphor from Factual Copy
+- **Visuals Own the Metaphor**: Surreal exaggeration belongs strictly in the visual composition (e.g., an object suspended in zero-G, encased in an ice cube, or magnified into a skyscraper).
+- **Copy Owns the Truth**: Written copy and headlines must NEVER turn a visual metaphor into a false real-world claim. (e.g., showing a watch in an ice block does NOT justify claiming it is "cryo-tested" if its actual operating range is -20°C to 50°C; visually placing a cookie next to a plant does NOT justify claiming it is "vegan").
+
+### 2. Domain-Specific Fact-Grounding Checklist
+Before ideation, compile a **Verified Fact Sheet** covering the applicable domain:
+- **Food, Beverage & Consumables**:
+  - Exact ingredients, processing methods, and origin realities.
+  - *Dietary & Allergen Safety*: NEVER assume, claim, or imply nut-free, gluten-free, dairy-free, halal, kosher, vegan, keto, or sugar-free unless explicitly verified by official packaging or certified documentation.
+  - *Health & Nutritional Claims*: Never invent medicinal, metabolic, or therapeutic cures. State verified nutritional facts plainly.
+  - *Brewing & Preparation*: Accurate brew ratios, water temperatures, grind sizes, and steeping times.
+- **Hardware, Physical Goods & Apparel**:
+  - Official specifications: Exact processor names/nodes, battery capacities, weight, dimensions, materials (e.g., anodized aluminum vs. titanium, sapphire glass vs. mineral glass).
+  - Certifications & Ratings: Accurate IP ratings (e.g., IP68 vs. 5ATM), MIL-STD test specifics, and thermal operating limits. Never extrapolate standard ratings into hyperbolic claims (e.g., do not call a splash-resistant item "deep-sea dive proof").
+- **Geography, Science, History & Culture**:
+  - Terroir & Origins: Exact farm, appellation, region, altitude, and harvest dates.
+  - Scientific Mechanisms: Explain physiological, chemical, or acoustic principles accurately.
+  - Cultural & Historical Context: Accurate dates, origins, and respectful terminology without tourism stereotypes.
+
+### 3. Pre-Flight Zero Unverified Claims Audit
+Before passing to Step 4, audit every statement across all 6 tiles:
+1. Does any on-image micro-copy overlay assert an unverified technical, dietary, or health claim?
+2. Does the caption state an ingredient, origin, or certification not present in the Step 1 Verified Fact Sheet?
+3. Does the Alt-Text describe real-world specs accurately while clearly noting surreal visual staging?
+
+### 4. Strict Non-Speculation Fallback Rule
+If any technical, dietary, or scientific detail cannot be verified from authoritative sources or user input:
+- **Immediately strip it** from headlines, micro-copy, and captions.
+- **Rewrite it into purely sensory, emotional, or lifestyle phrasing**:
+  - *Bad (Unverified Speculation)*: `"Cryo-tested to -60°C for arctic survival."`
+  - *Good (Factually Grounded)*: `"Built for sub-zero mornings and winter miles."`
+  - *Bad (Unverified Allergen)*: `"100% allergen-safe, gluten-free artisan roast."`
+  - *Good (Sensory/Origin Fact)*: `"Single-origin washed beans with floral jasmine notes."`
+
+---
+
+## 3. Campaign Funnel Narrative Across the 6 Tiles
 
 Do not write captions as isolated descriptions of individual images. Structure all 6 captions as an integrated marketing journey:
 
@@ -39,7 +79,7 @@ Do not write captions as isolated descriptions of individual images. Structure a
 
 ---
 
-## 3. Instagram SEO Hook & Alt-Text Rules
+## 4. Instagram SEO Hook & Alt-Text Rules
 
 1. **The 125-Character Opening Hook**:
    - The first sentence must appear before the Instagram "more" truncation point.
@@ -51,7 +91,7 @@ Do not write captions as isolated descriptions of individual images. Structure a
 
 ---
 
-## 4. Strategic 3-Tier Hashtag Ladder (8–12 Tags Total)
+## 5. Strategic 3-Tier Hashtag Ladder (8–12 Tags Total)
 
 Distribute hashtags into three distinct performance tiers:
 - **Tier 1: Broad Category (2–3 tags)**: High volume (>500k posts) for broad topic indexing (e.g., `#SpecialtyCoffee #SlowLiving`).
@@ -60,7 +100,7 @@ Distribute hashtags into three distinct performance tiers:
 
 ---
 
-## 5. Humanizer & Zero-AI-Slop Writing Standards
+## 6. Humanizer & Zero-AI-Slop Writing Standards
 
 All on-image micro-copy and caption copy must sound like a real person with a distinct point of view.
 
@@ -89,7 +129,7 @@ Read and apply the rules from:
 
 ---
 
-## 6. `captions.txt` Compilation Template
+## 7. `captions.txt` Compilation Template
 
 Inside the image output directory, format `captions.txt` in reverse-chronological upload order (**Upload #1 through Upload #6**):
 

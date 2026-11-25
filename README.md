@@ -49,12 +49,19 @@ Enforces rules from [`humanizer`](https://github.com/blader/humanizer) and [`no-
   3. *Hyper-Specific / Branded* (2–3 tags for high-ranking authority)
 - **Instagram SEO Alt-Text**: Included for every tile for search indexing and accessibility.
 
-### 5. Autonomous Quality Control (Zero-Human-Interference Gate)
+### 5. Universal Factual Grounding & Claim Verification Gate
+- **Visuals Own the Metaphor, Copy Owns the Truth**: Surreal exaggeration is restricted strictly to visual art direction; headlines, micro-copy, and captions remain 100% factually grounded.
+- **Cross-Domain Verified Fact Sheet**: Ingests and verifies official specs, ingredients, dietary/allergen safety, IP ratings, thermal limits, origins, and scientific mechanisms in Step 1.
+- **Zero Unverified Claims**: Forbids extrapolating standard tests into extreme claims (e.g. turning -20°C to 50°C into "cryo-tested") or assuming dietary statuses (gluten-free, halal, vegan) without explicit verification.
+- **Strict Non-Speculation Fallback**: Automatically rewrites unverified technical details into purely sensory, emotional, or lifestyle phrasing.
+
+### 6. Autonomous Quality Control (Zero-Human-Interference Gate)
 - **Zero Skipped Stages**: Mandates completion of Research, Visual Blueprints, and Copywriting before image prompts are generated.
 - **Strict 3×2 Cardinality**: Enforces exactly 6 tiles with reverse-chronological upload mapping.
 - **100% Full Captions**: Prevents models from summarizing or omitting captions; every tile must include hook (<125 chars), value narrative, CTA, 8–12 three-tier hashtags, and Alt-Text.
+- **Factual Integrity Assertion**: Audits all claims against the Verified Fact Sheet prior to human presentation.
 - **Self-Healing Loop**: If any check fails, the model silently self-corrects prior to user presentation.
-- **Deterministic CLI Validator**: Includes `scripts/validate_grid.py` to programmatically assert all 6 compliance gates in automated CI/CD pipelines or terminal workflows.
+- **Deterministic CLI Validator**: Includes `scripts/validate_grid.py` to programmatically assert compliance gates in automated CI/CD pipelines or terminal workflows.
 
 ---
 
@@ -62,24 +69,24 @@ Enforces rules from [`humanizer`](https://github.com/blader/humanizer) and [`no-
 
 ```mermaid
 flowchart TD
-    S1["Step 1: Web & Niche Keyword Research"] --> S2["Step 2: Avant-Garde Visual Blueprints"]
-    S2 --> S3["Step 3: Witty SEO Copy & Funnel Captions"]
+    S1["Step 1: Web Research & Fact-Grounding"] --> S2["Step 2: Avant-Garde Visual Blueprints"]
+    S2 --> S3["Step 3: Witty SEO Copy & Claim Verification"]
     S3 --> S4["Step 4: Autonomous QC & Confirmation Gate"]
     S4 -->|Pass Audit & User Confirms| S5["Step 5: Capability-Aware Routing"]
-    S5 -->|Native Image Tool Detected| G1["Sequential Image Generation (1 Image/Tile)"]
+    S5 -->|Native Image Tool Detected| G1["Compiled 12:10 Master Grid (grid_master.png)"]
     S5 -->|No Tool / External Mode| G2["Universal Direct Blueprint & Prompts Export"]
 ```
 
-1. **Step 1 (Research)**: Research live trending keywords, search intent, and niche hashtags.
+1. **Step 1 (Research & Fact-Grounding)**: Research live trending keywords, search intent, and compile a domain-relevant Verified Fact Sheet (ingredients, allergens, official hardware specs, ratings, origins).
 2. **Step 2 (Visual Blueprints)**: Reference [`references/visual-rules.md`](./references/visual-rules.md), [`references/grid-archetypes.md`](./references/grid-archetypes.md), and [`references/visual-benchmarks.md`](./references/visual-benchmarks.md) to define color palette, typography architecture, spatial mechanics, and 6 surreal concepts.
-3. **Step 3 (SEO & Humanized Copy)**: Reference [`references/seo-copy-rules.md`](./references/seo-copy-rules.md), enforce `humanizer` + `no-ai-slop`, and draft on-image micro-copy (<6 words) + 6-post funnel captions.
+3. **Step 3 (SEO Copy & Claim Verification)**: Reference [`references/seo-copy-rules.md`](./references/seo-copy-rules.md), enforce `humanizer` + `no-ai-slop`, audit all assertions against the Fact Sheet (rewriting unverified specs to sensory/lifestyle phrasing), and draft on-image micro-copy (<6 words) + 6-post funnel captions.
 4. **Step 4 (Autonomous QC & Confirmation Gate)**:
    - Evaluates internal compliance against [`references/quality-control.md`](./references/quality-control.md).
-   - Verifies 6 gates: anti-skipping, 3×2 layout, full captions, checkerboard contrast, scale diversity, and micro-copy length. Self-heals any defects.
+   - Verifies 7 gates: anti-skipping, 3×2 layout & 12:10 master grid proportions, full captions, checkerboard contrast, scale diversity, micro-copy length, and factual claim integrity. Self-heals any defects.
    - Presents the verified master system and pauses for user approval (`GENERATE` or revision requests).
 5. **Step 5 (Capability-Aware Routing)**:
-   - **Branch A (Native Tool Available)**: Generates strictly 1 final image version per tile (`tile_01` to `tile_06`) with 10s cooldown and 35s retry on 503 capacity errors. Saves images and compiles `captions.txt`.
-   - **Branch B (Universal Direct Export)**: If running in environments without image tools or if generation fails, references [`references/fallback-blueprint.md`](./references/fallback-blueprint.md) to immediately output complete, copy-pasteable image prompts (`--ar 4:5`), reverse-chronological `captions.txt`, and 3x2 matrix directly in the response (and writes `grid-blueprint.md` if file tools exist) for instant use in Midjourney, ChatGPT, Gemini, Ideogram, or Flux.
+   - **Branch A (Native Tool Available)**: Generates 1 single compiled 3×2 master grid image (`grid_master.png`) in exact 12:10 (6:5) proportions with 1px–2px neutral hairline dividers and anti-cropping guardrails. Compiles `captions.txt` and preserves individual 4:5 prompts in `grid-blueprint.md`.
+   - **Branch B (Universal Direct Export)**: If running in environments without image tools or if generation fails, references [`references/fallback-blueprint.md`](./references/fallback-blueprint.md) to immediately output the unified 12:10 Master Grid Prompt, the 6 individual 4:5 tile prompts, reverse-chronological `captions.txt`, and 3x2 matrix directly in the response for instant use in Google Flow, Midjourney, ChatGPT, Gemini, Ideogram, or Flux.
 
 ---
 

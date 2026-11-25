@@ -20,10 +20,38 @@ For granular spatial mechanics, physics patterns, and graphic devices, reference
 
 ---
 
-## 2. Visual Rhythm & Composition Rules
+## 2. Master Grid Architecture (12:10 Canvas & Hairline Dividers)
+
+When generating the unified master grid (`grid_master.png`), enforce the exact 3 columns × 2 rows matrix architecture:
+
+```text
++-----------------------+-----------------------+-----------------------+
+|        TILE 1         |        TILE 2         |        TILE 3         |  <-- ROW 1 (Top)
+|  [Top-Left: Dark]     |  [Top-Center: Light]  |  [Top-Right: Dark]    |
++-----------------------+-----------------------+-----------------------+
+|        TILE 4         |        TILE 5         |        TILE 6         |  <-- ROW 2 (Bottom)
+|  [Bottom-Left: Light] |  [Bottom-Center: Dark]|  [Bottom-Right: Light]|
++-----------------------+-----------------------+-----------------------+
+```
+
+### Canvas Aspect Ratio & Mathematics
+- **Exact 12:10 Proportions (Simplified to 6:5)**:
+  - 3 columns × 4 units wide = 12 units width.
+  - 2 rows × 5 units high = 10 units height.
+  - **Every internal cell is an uncropped 4:5 Instagram portrait** (`1080 × 1350 px`), creating a native master resolution of `3240 × 2700 px`.
+- **Razor-Thin Hairline Dividers (1px–2px)**:
+  - Cells are separated **only** by uniform, razor-thin 1px–2px solid neutral hairline divider lines (`#333333` or `#E0E0E0`).
+  - **Zero thick gutters, zero rounded corners, zero drop shadows, and zero outer margin padding.**
+- **Anti-Cropping & Layout Guardrails**:
+  - **Aspect Ratio Command**: Pass `--ar 12:10` (or `--ar 6:5`). If the provider only supports fixed presets, use `5:4` (the closest mathematical preset) while anchoring the 12:10 matrix full-bleed horizontally with minimal symmetrical bleed vertically—**never stretching or cropping any internal 4:5 cell**.
+  - **Negative Layout Constraints**: Strictly ban 3×3 grids, 2×3 vertical grids, uneven bento layouts, masonry boxes, collages, or floating card borders.
+
+---
+
+## 3. Visual Rhythm & Composition Rules
 
 - **Checkerboard Contrast Rhythm**:
-  - Alternate high-impact dark/saturated backgrounds with clean, high-negative-space light backgrounds across adjacent tiles so the 3x2 grid creates a powerful visual rhythm from afar:
+  - Alternate high-impact dark/saturated backgrounds with clean, high-negative-space light backgrounds across adjacent tiles:
     ```text
     Row 1: [ Dark / Saturated ]  [ Light / Clean Space ]  [ Dark / Saturated ]
     Row 2: [ Light / Clean Space ]  [ Dark / Saturated ]  [ Light / Clean Space ]
@@ -47,7 +75,7 @@ For granular spatial mechanics, physics patterns, and graphic devices, reference
 
 ---
 
-## 3. Typography as Graphic Design
+## 4. Typography as Graphic Design
 
 Never repeat the same text layout across tiles. Treat typography as an active visual design element:
 - **Dynamic Layout Treatments**:
@@ -63,7 +91,7 @@ Never repeat the same text layout across tiles. Treat typography as an active vi
 
 ---
 
-## 4. Safe Margins (10–15% Buffer)
+## 5. Safe Margins (10–15% Buffer)
 
-- Keep all text, logos, and critical focal elements at least **10–15% away from every edge** of the 4:5 vertical canvas (`1080x1350`).
-- Ensure the key visual punchline remains intact within the central 1:1 square crop (`1080x1080`) on the Instagram profile grid.
+- Inside each 4:5 cell, keep all text, logos, and critical focal elements at least **10–15% away from every edge** (`1080x1350`).
+- Ensure the key visual punchline remains intact within the central 1:1 square crop (`1080x1080`) when individual tiles are posted on Instagram.

@@ -1,6 +1,8 @@
 # Universal Blueprint & Direct Export Template
 
-This reference defines the provider-agnostic output package used when an environment does not support native image generation, when generation tools are unavailable, or when the user wants ready-to-run prompts for external tools (Midjourney, ChatGPT / DALL-E 3, Gemini / Imagen, Ideogram, Flux).
+This reference defines the provider-agnostic output package used when an environment does not support native image generation, when generation tools are unavailable, or when the user wants ready-to-run prompts for external tools (Google Flow, Midjourney, ChatGPT / DALL-E 3, Gemini / Imagen, Ideogram, Flux).
+
+It provides **both** the single compiled **Master Grid Prompt (12:10 / 6:5)** and the **6 Individual Tile Prompts (4:5)**.
 
 ---
 
@@ -17,14 +19,15 @@ Depending on the active agent runtime:
 ```markdown
 # 6-Tile Instagram Campaign Blueprint
 
-Use these self-contained visual prompts and captions to generate your 6-tile grid in Midjourney, ChatGPT, Gemini, Ideogram, or Flux.
+Use these prompts to generate your campaign either as a single compiled 3×2 master grid (`grid_master.png`) or as 6 individual tiles in Google Flow, Midjourney, ChatGPT, Gemini, Ideogram, or Flux.
 
 ---
 
 ## 1. Global Campaign Specifications
 
 - **Campaign Theme**: [Overarching Campaign Narrative]
-- **Aspect Ratio**: 4:5 Vertical (`1080x1350 px`) with central 1:1 Square Safe Area (`1080x1080 px`)
+- **Master Grid Aspect Ratio**: 12:10 (6:5) landscape (`3240x2700 px`), holding 6 uncropped 4:5 vertical cells (`1080x1350 px` each).
+- **Individual Tile Aspect Ratio**: 4:5 Vertical (`1080x1350 px`) with central 1:1 Square Safe Area (`1080x1080 px`).
 - **Safe Margins**: All key visual elements, text overlays, and product silhouettes kept 10–15% inside borders.
 
 ### Master 2–3 Color Palette (Strict Family)
@@ -42,7 +45,37 @@ Use these self-contained visual prompts and captions to generate your 6-tile gri
 
 ---
 
-## 2. 3x2 Profile Grid Map & Posting Order
+## 2. Unified Master Grid Generation Prompt (Compiled 12:10 Image)
+
+Generate the complete 3×2 profile grid as a single master image (`grid_master.png`):
+
+```text
+A professional editorial 3x2 Instagram grid campaign sheet featuring 6 distinct conceptual art-directed scenes of [Exact Product Description], displayed in a clean 3 columns by 2 rows matrix.
+
+LAYOUT & GRID PROPORTIONS:
+- Canvas format is strictly 12:10 landscape (6:5 aspect ratio).
+- Exactly 3 columns and 2 rows forming 6 identical vertical 4:5 cells (each cell 1080x1350 proportion).
+- Cells are separated ONLY by razor-thin, uniform 1px to 2px solid neutral hairline dividers (#333333 or #E0E0E0).
+- ZERO thick borders, zero gutters, zero rounded corners, zero drop shadows, zero outer padding or white margins.
+- ANTI-CROPPING: Full-bleed edge-to-edge layout. Never stretch, distort, or crop any internal 4:5 cell.
+- NEGATIVE LAYOUT CONSTRAINTS: Ban 3x3 grids, ban 2x3 vertical grids, ban bento layouts, ban collages, ban overlapping floating cards.
+
+CELL-BY-CELL ART DIRECTION (Checkerboard Rhythm):
+- TOP-LEFT (Row 1, Col 1) [Dark]: [Surreal concept 1, dark background tone #HEX, specific typography placement].
+- TOP-CENTER (Row 1, Col 2) [Light]: [Surreal concept 2, clean light background #HEX, specific typography placement].
+- TOP-RIGHT (Row 1, Col 3) [Dark]: [Surreal concept 3, dark background tone #HEX, specific typography placement].
+- BOTTOM-LEFT (Row 2, Col 1) [Light]: [Surreal concept 4, micro-isolation <15% scale, vast light negative space #HEX].
+- BOTTOM-CENTER (Row 2, Col 2) [Dark]: [Surreal concept 5, dark background tone #HEX, specific container/physics swap].
+- BOTTOM-RIGHT (Row 2, Col 3) [Light]: [Surreal concept 6, clean light background #HEX, kinetic human interaction].
+
+COLOR PALETTE & LIGHTING:
+Strict unified 2-3 color family: Dominant [#HEX], Canvas [#HEX], Accent [#HEX]. Studio directional cinematic lighting with razor-sharp product fidelity matching the reference item 100%.
+--ar 12:10
+```
+
+---
+
+## 3. 3x2 Profile Grid Map & Posting Order
 
 ```text
 +-----------------------+-----------------------+-----------------------+
@@ -68,7 +101,7 @@ Use these self-contained visual prompts and captions to generate your 6-tile gri
 
 ---
 
-## 3. Tile-by-Tile Generation Prompts & SEO Copy
+## 4. Individual Tile-by-Tile Prompts & SEO Copy (For One-by-One Generation)
 
 ### Tile [N]: [Catchy Tile Name]
 - **Grid Position**: Row [X], Column [Y] | **Upload Order**: Upload #[M] of 6
@@ -76,9 +109,9 @@ Use these self-contained visual prompts and captions to generate your 6-tile gri
 - **Conceptual Lens**: [Scale & Physics / Container Swap / Kinetic Human / Typographic Architecture / Screen UI / Negative Space Whisper]
 - **Background Tone**: [Dark / Light] (Checkerboard Rhythm)
 
-#### Copy-Pasteable Image Generation Prompt
+#### Copy-Pasteable Individual Tile Prompt (Google Flow / Midjourney / ChatGPT)
 ```text
-[Universal Prompt formatted for Midjourney / ChatGPT / Gemini / Flux:
+[Universal Prompt formatted for 4:5 vertical portrait:
 1. Product Fidelity: The exact physical product subject, materials, surface finish, colors, and proportions matching the reference asset.
 2. Surreal Metaphor & Staging: Explicitly preserves the surreal scale, gravity-defying physics, or unexpected environment (e.g. suspended mid-air in zero-G, shrunk inside an emergency glass box, or scaled to <15% in vast negative space). Never simplify into generic tabletop or studio photography.
 3. Typography & Graphic Layout: Specifies graphic text placement if rendered directly (curved halo, split punchline, floating UI banner, or overlapping letters).
