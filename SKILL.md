@@ -3,14 +3,14 @@ name: ig-grid-brainstorm
 description: >-
   Act as an avant-garde conceptual art director brainstorming a single product image into 6 wildly distinct,
   surprising Instagram grid posts (2 rows x 3 columns) unified by one campaign vibe, a strict 2–3 color palette,
-  checkerboard rhythm, typography as graphic design, humanized copy, and capability-aware automated image generation.
+  checkerboard rhythm, typography as graphic design, humanized copy, autonomous quality control, and capability-aware image generation.
 ---
 
 # Instagram Grid Brainstormer (`ig-grid-brainstorm`)
 
 Act as an **avant-garde conceptual art director** creating a 6-post Instagram campaign (3x2 grid) from a single product image. Your goal is to invent 6 wildly distinct, surprising visual concepts unified by one overarching campaign vibe and a strict 2–3 color palette.
 
-This skill is **provider-agnostic**: it runs across any AI agent environment (Antigravity, Claude, Gemini CLI, ChatGPT, or custom agents) using capability-aware routing for image generation and export.
+This skill is **provider-agnostic**: it runs across any AI agent environment (Antigravity, Claude, Gemini CLI, ChatGPT, or custom agents) using autonomous quality control gates and capability-aware routing for image generation and export.
 
 ---
 
@@ -65,8 +65,8 @@ This skill is **provider-agnostic**: it runs across any AI agent environment (An
 flowchart TD
     S1["Step 1: Web & Niche Keyword Research"] --> S2["Step 2: Avant-Garde Visual Blueprints"]
     S2 --> S3["Step 3: Witty SEO Copy & Funnel Captions"]
-    S3 --> S4["Step 4: Human Confirmation Gate (GENERATE Loop)"]
-    S4 -->|User Confirms GENERATE| S5["Step 5: Capability-Aware Routing"]
+    S3 --> S4["Step 4: Autonomous QC & Confirmation Gate"]
+    S4 -->|Pass Audit & User Confirms| S5["Step 5: Capability-Aware Routing"]
     S5 -->|Native Image Tool Detected| G1["Sequential Image Generation (1 Image/Tile)"]
     S5 -->|No Tool / External Mode| G2["Universal Direct Blueprint & Prompts Export"]
 ```
@@ -97,11 +97,21 @@ flowchart TD
    - **Strategic 3-Tier Hashtags**: 8–12 tags per tile (2–3 Broad, 4–5 Mid-Volume Niche, 2–3 Hyper-Specific/Branded).
    - **Instagram SEO Alt-Text**: Descriptive visual search text per tile.
 
-### Step 4: Human Confirmation Gate
-1. Present the master visual system, 3x2 matrix map, and 6 complete post blueprints.
-2. **Pause and prompt the user**:
+### Step 4: Autonomous Quality Control & Confirmation Gate
+1. **Autonomous Pre-Flight Audit (Silent Gate)**:
+   - Read **[references/quality-control.md](./references/quality-control.md)**.
+   - Before presenting output, verify all 6 compliance gates:
+     1. *Mandatory Stages*: Steps 1, 2, and 3 are completely executed (never skip to prompts).
+     2. *Strict 3×2 Composition*: Exactly 6 tiles mapped across Row 1 (Tiles 1-3) & Row 2 (Tiles 4-6) with reverse-chronological upload order (Upload #1 ➔ Tile 6).
+     3. *Full Captions Mandatory*: Every single tile (1 to 6) has an opening hook (<125 chars), value narrative, CTA, 8–12 three-tier hashtags, and Alt-Text. Zero placeholders or truncated summaries.
+     4. *Checkerboard Contrast*: Adjacent tiles strictly alternate background tone (Row 1: Dark-Light-Dark, Row 2: Light-Dark-Light).
+     5. *Surreal Metaphor & Scale*: Zero repeated tabletop setups; at least one <15% scale negative-space tile.
+     6. *Micro-Copy & Anti-Slop*: On-image copy strictly under 6 words; zero banned AI buzzwords or binary contrasts.
+   - *Self-Healing Directive*: If any check fails, silently regenerate the violating tile or caption before presenting to the user.
+2. **Present Verified Blueprints**: Present the master visual system, 3x2 matrix map, and 6 complete post blueprints.
+3. **Pause for Human Confirmation**:
    > *"Please review the brainstormed grid strategy, blueprints, and captions above. Reply with **GENERATE** to create the images, or let me know any revisions you would like to make."*
-3. *Revision Loop*: If the user requests edits, apply changes and ask again until approval is received.
+4. *Revision Loop*: If the user requests edits, apply changes and re-verify before asking again.
 
 ### Step 5: Capability-Aware Generation & Output Routing
 When the user confirms with `"GENERATE"` (or asks to create the assets):
@@ -126,6 +136,7 @@ When the user confirms with `"GENERATE"` (or asks to create the assets):
 
 ## Skill References
 
+- **[Quality Control Rubric](./references/quality-control.md)**: Autonomous self-audit gates, anti-skipping rules, and self-healing directives.
 - **[Visual Rules](./references/visual-rules.md)**: Avant-garde art direction, checkerboard contrast, scale variance, and graphic typography.
 - **[SEO & Copy Rules](./references/seo-copy-rules.md)**: Web keyword research, funnel narrative, 3-tier hashtags, humanizer / no-ai-slop rules, and `captions.txt` template.
 - **[Universal Direct Blueprint](./references/fallback-blueprint.md)**: Direct export template for external image generators (Midjourney, ChatGPT, Gemini, Flux).

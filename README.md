@@ -1,18 +1,18 @@
 # Instagram Grid Brainstormer (`ig-grid-brainstorm`)
 
-An **avant-garde conceptual art director skill** that transforms a single anchor product image into an aesthetic, high-converting 6-tile Instagram profile grid (2 rows × 3 columns) with strict visual consistency rules, checkerboard feed rhythm, humanized zero-AI-slop copywriting, deep Instagram SEO funnel strategy, and capability-aware image generation.
+An **avant-garde conceptual art director skill** that transforms a single anchor product image into an aesthetic, high-converting 6-tile Instagram profile grid (2 rows × 3 columns) with strict visual consistency rules, checkerboard feed rhythm, humanized zero-AI-slop copywriting, deep Instagram SEO funnel strategy, autonomous pre-flight quality control, and capability-aware image generation.
 
 Refactored using **progressive disclosure** so that `SKILL.md` acts as a lean, fast, and reliable traffic controller (strictly under 250 lines) while delegating deep formatting rules to specialized references.
 
-This skill is **provider-agnostic**: it runs seamlessly across any AI agent environment (Antigravity, Claude, Gemini CLI, ChatGPT, or custom agents) without vendor lock-in or hardcoded platform dependencies.
+This skill is **provider-agnostic**: it runs seamlessly across any AI agent environment (Antigravity, Claude, Gemini CLI, ChatGPT, or custom agents) without vendor lock-in, skipping stages, or dropping captions.
 
 ---
 
 ## Key Features & Rules
 
 ### 1. Avant-Garde Visual & Brand Consistency
-- **Strict 2–3 Color Palette**: Palette extracted directly from the hero product (1 dominant dark/saturated tone, 1 light/clean background tone, 1 vibrant accent).
-- **Checkerboard Rhythm**: Alternating dark and light backgrounds across adjacent tiles (e.g., Dark-Light-Dark on row 1, Light-Dark-Light on row 2) for immediate high-contrast profile curation from afar.
+- **Strict 2–3 Color Palette**: Extracted directly from the hero product (1 dominant dark/saturated tone, 1 light/clean background tone, 1 vibrant accent).
+- **Checkerboard Rhythm**: Alternating dark and light backgrounds across adjacent tiles (Row 1: Dark-Light-Dark, Row 2: Light-Dark-Light) for immediate high-contrast profile curation from afar.
 - **Unified Graphic Typography**: A single consistent font family across all posts, using typography as an architectural design element (curved halo text, split punchlines, UI badges, overlapping oversized letters).
 - **Extreme Scale Variance**: Enforces dramatic scale shifts across the 6 tiles—ranging from full-bleed macro details to tiny compositions where the product occupies <15% of the frame surrounded by vast negative space.
 - **Zero "Product-on-a-Table" Repetition**: Strict ban on default catalog podiums, tabletop flat-lays, and repeated camera angles. The product is 100% physically preserved, while its environment is surreal and conceptual.
@@ -49,6 +49,13 @@ Enforces rules from [`humanizer`](https://github.com/blader/humanizer) and [`no-
   3. *Hyper-Specific / Branded* (2–3 tags for high-ranking authority)
 - **Instagram SEO Alt-Text**: Included for every tile for search indexing and accessibility.
 
+### 5. Autonomous Quality Control (Zero-Human-Interference Gate)
+- **Zero Skipped Stages**: Mandates completion of Research, Visual Blueprints, and Copywriting before image prompts are generated.
+- **Strict 3×2 Cardinality**: Enforces exactly 6 tiles with reverse-chronological upload mapping.
+- **100% Full Captions**: Prevents models from summarizing or omitting captions; every tile must include hook (<125 chars), value narrative, CTA, 8–12 three-tier hashtags, and Alt-Text.
+- **Self-Healing Loop**: If any check fails, the model silently self-corrects prior to user presentation.
+- **Deterministic CLI Validator**: Includes `scripts/validate_grid.py` to programmatically assert all 6 compliance gates in automated CI/CD pipelines or terminal workflows.
+
 ---
 
 ## 5-Step Execution Pipeline
@@ -57,8 +64,8 @@ Enforces rules from [`humanizer`](https://github.com/blader/humanizer) and [`no-
 flowchart TD
     S1["Step 1: Web & Niche Keyword Research"] --> S2["Step 2: Avant-Garde Visual Blueprints"]
     S2 --> S3["Step 3: Witty SEO Copy & Funnel Captions"]
-    S3 --> S4["Step 4: Human Confirmation Gate (GENERATE Loop)"]
-    S4 -->|User Confirms GENERATE| S5["Step 5: Capability-Aware Routing"]
+    S3 --> S4["Step 4: Autonomous QC & Confirmation Gate"]
+    S4 -->|Pass Audit & User Confirms| S5["Step 5: Capability-Aware Routing"]
     S5 -->|Native Image Tool Detected| G1["Sequential Image Generation (1 Image/Tile)"]
     S5 -->|No Tool / External Mode| G2["Universal Direct Blueprint & Prompts Export"]
 ```
@@ -66,7 +73,10 @@ flowchart TD
 1. **Step 1 (Research)**: Research live trending keywords, search intent, and niche hashtags.
 2. **Step 2 (Visual Blueprints)**: Reference [`references/visual-rules.md`](./references/visual-rules.md) and [`references/grid-archetypes.md`](./references/grid-archetypes.md) to define color palette, typography architecture, and 6 surreal concepts.
 3. **Step 3 (SEO & Humanized Copy)**: Reference [`references/seo-copy-rules.md`](./references/seo-copy-rules.md), enforce `humanizer` + `no-ai-slop`, and draft on-image micro-copy (<6 words) + 6-post funnel captions.
-4. **Step 4 (Confirmation Gate)**: Present the strategy and pause for user approval (`GENERATE` or revision requests).
+4. **Step 4 (Autonomous QC & Confirmation Gate)**:
+   - Evaluates internal compliance against [`references/quality-control.md`](./references/quality-control.md).
+   - Verifies 6 gates: anti-skipping, 3×2 layout, full captions, checkerboard contrast, scale diversity, and micro-copy length. Self-heals any defects.
+   - Presents the verified master system and pauses for user approval (`GENERATE` or revision requests).
 5. **Step 5 (Capability-Aware Routing)**:
    - **Branch A (Native Tool Available)**: Generates strictly 1 final image version per tile (`tile_01` to `tile_06`) with 10s cooldown and 35s retry on 503 capacity errors. Saves images and compiles `captions.txt`.
    - **Branch B (Universal Direct Export)**: If running in environments without image tools or if generation fails, references [`references/fallback-blueprint.md`](./references/fallback-blueprint.md) to immediately output complete, copy-pasteable image prompts (`--ar 4:5`), reverse-chronological `captions.txt`, and 3x2 matrix directly in the response (and writes `grid-blueprint.md` if file tools exist) for instant use in Midjourney, ChatGPT, Gemini, Ideogram, or Flux.
@@ -80,8 +90,10 @@ ig-grid-brainstorm/
 ├── SKILL.md                          # Lean traffic controller (under 250 lines)
 ├── README.md                         # Repository documentation
 ├── scripts/
-│   └── generate_grid.py              # Optional local generator script with cooldown & retry logic
+│   ├── generate_grid.py              # Optional local generator script with cooldown & retry logic
+│   └── validate_grid.py              # Deterministic QC validator for CI/CD and scripts
 ├── references/
+│   ├── quality-control.md            # Autonomous self-audit rubric, gates, and self-healing directives
 │   ├── visual-rules.md               # Avant-garde art direction, checkerboard, scale, typography
 │   ├── seo-copy-rules.md             # Keyword research, funnel narrative, 3-tier tags, anti-slop
 │   ├── fallback-blueprint.md         # Universal direct export template (Midjourney, ChatGPT, Gemini, Flux)
