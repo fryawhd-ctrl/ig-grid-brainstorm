@@ -79,17 +79,16 @@ Use this complete blueprint to generate the 6 matching tiles in Gemini, ChatGPT 
 #### Copy-Pasteable Image Generation Prompt (Gemini / ChatGPT / Midjourney)
 ```text
 [Detailed prompt describing:
-1. The exact product subject, materials, surface textures, and reflections matching the anchor image.
-2. Perspective angle and camera focal length (e.g. 50mm, eye-level, soft directional morning sunlight).
-3. Compositional framing (e.g. 85% full scale, or scaled down to 35% inside an antique balance scale).
-4. Specific background environment with exact hex color tones ([#HEX] dark espresso or [#HEX] oat parchment).
-5. Lighting, shadow depth, and clean negative space with 15% edge clearance.
-6. Aspect ratio: --ar 4:5 or portrait 1080x1350.]
+1. Product Fidelity: The exact product subject, materials, surface textures, and reflections matching the reference image.
+2. Surreal Metaphor & Setting: Preserves the exact surreal scale, physical interactions, and unexpected environment from the concept (e.g. suspended mid-air, embedded in a ring box, miniature diorama, or floating in 80% negative space). Do NOT simplify into generic tabletop or studio product photography.
+3. Typography & Graphic Placement: Notes typography geometry if rendered directly (e.g. curved type, split punchline, or UI badge).
+4. Color & Contrast: Strict 2-3 color palette enforcement with exact hex values ([#HEX] dark/saturated tone vs [#HEX] light/clean space for checkerboard rhythm).
+5. Aspect ratio & margins: --ar 4:5 (portrait 1080x1350) with 10-15% safe inner margin.]
 ```
 
 #### On-Image Micro-Copy Overlay
-- **Text**: `"[Max 6-8 words]"`
-- **Placement**: [Top-Center / Bottom-Center], [Font Family], [Font Weight], [Hex Color]
+- **Text**: `"[Witty micro-copy under 6 words]"`
+- **Graphic Placement**: [Curved around object / Split top-and-bottom / In UI chat bubble / Overlapping background type], [Font Family], [Font Weight], [Hex Color]
 
 #### SEO Hook & Humanized Caption
 **[Opening Hook Line <125 characters with primary keywords]**

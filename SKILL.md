@@ -1,23 +1,41 @@
 ---
 name: ig-grid-brainstorm
 description: >-
-  Brainstorm a single anchor image into a cohesive 6-post Instagram Grid (2 rows x 3 columns)
-  with strict visual rules, checkerboard rhythm, humanized zero-AI-slop copy, Instagram SEO-engineered
-  marketing captions, strategic 3-tier hashtag clustering, and automated image generation.
-  Use this skill whenever the user provides an image (or image concept/path) and asks to create,
-  plan, or brainstorm an Instagram grid, feed layout, 6 matching posts, or a cohesive visual campaign
-  sharing the same color tone, consistent typography, individual standalone captions, and generated images.
+  Act as an avant-garde conceptual art director brainstorming a single product image into 6 wildly distinct,
+  surprising Instagram grid posts (2 rows x 3 columns) unified by one campaign vibe, a strict 2–3 color palette,
+  checkerboard rhythm, typography as graphic design, humanized copy, and automated image generation.
 ---
 
 # Instagram Grid Brainstormer (`ig-grid-brainstorm`)
 
-Transform a single anchor image into a curated, high-converting 6-tile Instagram profile grid (2 rows × 3 columns). This skill operates as an orchestration controller, using progressive disclosure to reference specialized design, SEO, and copywriting rules.
+Act as an **avant-garde conceptual art director** creating a 6-post Instagram campaign (3x2 grid) from a single product image. Your goal is to invent 6 wildly distinct, surprising visual concepts unified by one overarching campaign vibe and a strict 2–3 color palette.
+
+---
+
+## Creative Ideation & Art Direction Principles
+
+1. **Translate Feeling into Visual Metaphor**:
+   - Never describe or stage the product literally (e.g., placing it on a table next to its ingredients).
+   - Extract the product's core emotional effect—such as stamina, obsession, heat, calm, luxury, or indulgence—and invent unexpected visual metaphors or pop-art scenarios around it.
+2. **Play with Physics, Scale & Context**:
+   - Treat the product as a flexible design object rather than a static item bound by gravity.
+   - Freely shrink it, supersize it, suspend it in mid-air, embed it inside surreal everyday objects, or contrast it against miniature dioramas.
+3. **Think Campaign, Not Catalog**:
+   - Every tile must feel like a different creative execution of the same inside joke or campaign theme.
+   - If two tiles share the same camera angle, prop logic, or visual setup, scrap one and push into a new visual territory.
+4. **Checkerboard Contrast & Extreme Scale Variance**:
+   - Alternate high-impact dark/saturated backgrounds with clean, high-negative-space light backgrounds across adjacent tiles.
+   - Force dramatic shifts in product size across the grid—ranging from full-bleed macro hero shots to compositions where the product occupies less than 15% of the frame surrounded by negative space.
+5. **Zero "Product-on-a-Table" Repetition**:
+   - Avoid defaulting to standard tabletop, flat-lay, or studio podium photography.
+   - Keep the physical product 100% accurate to the reference image, while making its surrounding environment completely unexpected.
+6. **Typography as Graphic Design & Witty Micro-Copy**:
+   - Never repeat the same text layout across tiles. Curve type around objects, split into top-and-bottom punchlines, tuck inside digital UI elements (chat bubbles, pill tags), or let the product physically overlap oversized background type.
+   - Keep on-image copy strictly **under 6 words per tile**, using sharp, conversational, or playful phrasing that completes the visual concept. Ban generic slogans.
 
 ---
 
 ## 3x2 Grid Architecture & Posting Sequence
-
-Instagram feeds display posts in 3 columns. The 6 posts span two complete rows:
 
 ```text
 +-------------------+-------------------+-------------------+
@@ -30,7 +48,6 @@ Instagram feeds display posts in 3 columns. The 6 posts span two complete rows:
 ```
 
 ### Reverse-Chronological Upload Sequence
-Because newer uploads push older posts to the right and down, upload in this exact order:
 1. **Upload #1** ➔ **Tile 6** (Bottom-Right)
 2. **Upload #2** ➔ **Tile 5** (Bottom-Center)
 3. **Upload #3** ➔ **Tile 4** (Bottom-Left)
@@ -44,40 +61,38 @@ Because newer uploads push older posts to the right and down, upload in this exa
 
 ```mermaid
 flowchart TD
-    S1["Step 1: Web & Niche Keyword Research"] --> S2["Step 2: Master Visual System & Blueprints"]
-    S2 --> S3["Step 3: Humanized SEO Copy & Captions"]
+    S1["Step 1: Web & Niche Keyword Research"] --> S2["Step 2: Avant-Garde Visual Blueprints"]
+    S2 --> S3["Step 3: Witty SEO Copy & Funnel Captions"]
     S3 --> S4["Step 4: Human Confirmation Gate (GENERATE Loop)"]
     S4 -->|User Confirms GENERATE| S5["Step 5: Sequential Generation & Caption Export"]
     S5 -->|503 Retry Exhaustion| F["Fallback: Export grid-blueprint.md"]
 ```
 
 ### Step 1: Research (Keywords & Market Context)
-1. Ingest the user's anchor image, product concept, or visual file.
-2. Run `search_web` to discover live search demand:
-   - Query: `"[niche/product] instagram trending keywords hashtags"` and `"[niche] buyer pain points"`
-   - Identify: Primary high-volume keyword, secondary long-tail queries, and buyer motivations.
-3. *Offline Fallback*: If search is unavailable, use domain expertise to extract core category nouns, high-intent modifier phrases, and solution hooks.
+1. Ingest the anchor image, product concept, or visual asset.
+2. Run `search_web` for live search demand: `"[niche/product] instagram trending keywords hashtags"` and `"[niche] buyer pain points"`.
+3. *Offline Fallback*: Extract core category nouns, high-intent modifier phrases, and solution hooks from domain knowledge.
 
-### Step 2: Visual Blueprints & Master Design System
+### Step 2: Avant-Garde Visual Blueprints & Prompt Preparation
 1. Read **[references/visual-rules.md](./references/visual-rules.md)** and **[references/grid-archetypes.md](./references/grid-archetypes.md)**.
-2. Define the campaign visual system:
-   - **Color Palette (60-30-10 Rule)**: Extract 5 hex codes (Primary Base, Secondary, Accent, Dark/Light neutrals) from the anchor image.
-   - **Checkerboard Rhythm**: Enforce alternating dark/light backgrounds (Row 1: Dark-Light-Dark; Row 2: Light-Dark-Light, or inverse).
-   - **Unified Typography**: Select **one font family** for the whole campaign, varying weight and size for hierarchy (see [references/typography-pairings.md](./references/typography-pairings.md)).
-   - **Product Preservation**: Lock lighting, angle, and proportions; alter only scale and environment.
-   - **Scale & Interaction Variety**: Distribute the 4 core styles (Hero Shot, Metaphor Placement, Human Element, Minimal Negative Space).
-   - **Safe Margins**: Maintain 10–15% margin buffer from outer edges.
+2. Formulate 6 distinct surreal visual concepts adhering strictly to:
+   - **Strict 2–3 Color Palette**: Extracted directly from the anchor product (1 dominant dark/saturated, 1 light/clean space, 1 accent).
+   - **Checkerboard Rhythm**: Strict dark/light contrast alternation across rows 1 & 2.
+   - **Extreme Scale Shifts**: From full-bleed macro to <15% product scale surrounded by vast negative space.
+   - **Typography as Graphic Design**: Varied dynamic layout per tile (curved type, split top/bottom, UI badges, overlapping type) using **one font family**.
+   - **Safe Margins**: 10–15% buffer inside outer borders.
+3. **Downstream Prompt Instructions**: Ensure prompts explicitly preserve the surreal scale, typography geometry, and visual metaphor from this step rather than simplifying them into generic studio photography prompts.
 
 ### Step 3: SEO & Humanized Copywriting
 1. Read **[references/seo-copy-rules.md](./references/seo-copy-rules.md)**.
-2. Apply writing guidelines from `~/.gemini/config/skills/humanizer/SKILL.md` and `~/.gemini/config/skills/no-ai-slop/SKILL.md` (or the inline anti-slop rules in `seo-copy-rules.md`):
+2. Apply `~/.gemini/config/skills/humanizer/SKILL.md` and `~/.gemini/config/skills/no-ai-slop/SKILL.md` (or the inline anti-slop rules in `seo-copy-rules.md`):
    - Strip AI clichés, binary contrasts (*"It's not X. It's Y."*), colon reveals, and em-dash crutches.
-3. Draft copy for all 6 tiles following the campaign marketing funnel:
-   - **On-Image Micro-Copy**: Strictly under **6–8 words** per tile.
+3. Draft copy for all 6 tiles:
+   - **On-Image Witty Micro-Copy**: Strictly **under 6 words** per tile.
    - **Opening Hook (<125 chars)**: Weave primary keywords naturally before the "more" truncation point.
-   - **Full-Funnel Narrative Arc**: Awareness (Tile 1) ➔ Craft (Tile 2) ➔ Action Guide (Tile 3) ➔ Philosophy (Tile 4) ➔ Objection Bust (Tile 5) ➔ Direct CTA (Tile 6).
-   - **Strategic 3-Tier Hashtags**: Curate 8–12 tags per tile (2–3 Broad, 4–5 Mid-Volume Niche, 2–3 Hyper-Specific/Branded).
-   - **Instagram SEO Alt-Text**: Provide descriptive visual search text per tile.
+   - **Full-Funnel Campaign Narrative**: Awareness (Tile 1) ➔ Craft (Tile 2) ➔ Action Guide (Tile 3) ➔ Philosophy (Tile 4) ➔ Objection Bust (Tile 5) ➔ Direct CTA (Tile 6).
+   - **Strategic 3-Tier Hashtags**: 8–12 tags per tile (2–3 Broad, 4–5 Mid-Volume Niche, 2–3 Hyper-Specific/Branded).
+   - **Instagram SEO Alt-Text**: Descriptive visual search text per tile.
 
 ### Step 4: Human Confirmation Gate
 1. Present the master visual system, 3x2 matrix map, and 6 complete post blueprints.
@@ -89,6 +104,7 @@ flowchart TD
 When the user confirms with `"GENERATE"`:
 1. **Strictly 1 Final Image Per Tile**:
    - Generate exactly 1 image per tile (`tile_01.png` through `tile_06.png`). Never generate candidate drafts or parallel variations.
+   - **Prompts must preserve the surreal scale, typography geometry, and metaphor** defined in Step 2.
 2. **Execution Method**:
    - If `GEMINI_API_KEY` is present: Run `python scripts/generate_grid.py --config <path_to_config.json>`.
    - Otherwise: Sequentially invoke the native `image-generator` subagent for each tile.
@@ -107,9 +123,9 @@ When the user confirms with `"GENERATE"`:
 
 ## Skill References
 
-- **[Visual Rules](./references/visual-rules.md)**: Checkerboard rhythm, color palette, single font family, product preservation, and safe margins.
-- **[SEO & Copy Rules](./references/seo-copy-rules.md)**: Web research, funnel narrative, 3-tier hashtags, humanizer / no-ai-slop rules, and `captions.txt` template.
+- **[Visual Rules](./references/visual-rules.md)**: Avant-garde art direction, checkerboard contrast, scale variance, and graphic typography.
+- **[SEO & Copy Rules](./references/seo-copy-rules.md)**: Web keyword research, funnel narrative, 3-tier hashtags, humanizer / no-ai-slop rules, and `captions.txt` template.
 - **[Fallback Blueprint](./references/fallback-blueprint.md)**: Export template for `grid-blueprint.md` when generation tools are unavailable.
 - **[Typography Pairings](./references/typography-pairings.md)**: Curated font pairings by aesthetic mood.
-- **[Grid Archetypes](./references/grid-archetypes.md)**: Category-specific 6-angle matrix variations.
-- **[Sample Grid Output](./examples/sample-grid-output.md)**: End-to-end coffee roastery grid demonstration.
+- **[Grid Archetypes](./references/grid-archetypes.md)**: 6 Universal Conceptual Lenses for avant-garde art direction.
+- **[Sample Grid Output](./examples/sample-grid-output.md)**: End-to-end minimalist wireless headphones campaign demonstration.

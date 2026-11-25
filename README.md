@@ -82,10 +82,10 @@ ig-grid-brainstorm/
 │   ├── visual-rules.md               # Checkerboard rhythm, colors, typography, margins
 │   ├── seo-copy-rules.md             # Web keyword research, funnel, 3-tier tags, anti-AI-slop
 │   ├── fallback-blueprint.md         # grid-blueprint.md export template
-│   ├── grid-archetypes.md            # Category-specific 6-angle matrices
+│   ├── grid-archetypes.md            # 6 Universal Conceptual Lenses for avant-garde art direction
 │   └── typography-pairings.md        # Curated font pairings by aesthetic mood
 └── examples/
-    └── sample-grid-output.md         # End-to-end sample run (Artisanal Coffee Roastery)
+    └── sample-grid-output.md         # End-to-end sample run (Minimalist Wireless Headphones)
 ```
 
 ---

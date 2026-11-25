@@ -82,9 +82,10 @@ Read and apply the rules from:
    - Do not use em-dashes (`—`) as an automatic sentence bridge. Use clean periods or natural commas.
 5. **Banned Fake-Insight Setups & Kickers**:
    - Cut: *"What most people get wrong:"*, *"Here's the secret:"*, *"Read that again."*, *"Let that sink in."*
-6. **On-Image Micro-Copy**:
-   - Strictly **6–8 words maximum**.
-   - Anchored top-center or bottom-center with 10–15% safe margins.
+6. **Witty On-Image Micro-Copy Only**:
+   - Strictly **under 6 words per tile**.
+   - Ban generic promotional slogans ("Best quality", "Shop now") and literal descriptive labels. Phrasing must be sharp, witty, or conversational, completing the surreal visual metaphor.
+   - **Typography as Graphic Design**: Never repeat the same text layout across tiles. Curve type around objects, split into top-and-bottom punchlines, tuck inside UI tags/bubbles, or overlap background type. Maintain 10–15% safe margins.
 
 ---
 

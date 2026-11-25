@@ -1,76 +1,65 @@
-# Visual & Brand Consistency Rules
+# Avant-Garde Visual Rules & Art Direction Principles
 
-This reference outlines the non-negotiable visual architecture, composition styles, and margin rules required to create a cohesive 6-post Instagram profile grid.
-
----
-
-## 1. Checkerboard Rhythm (Dark / Light Balance)
-
-To prevent visual fatigue and ensure the profile feed looks deliberately curated from a distance, alternate background tones across adjacent tiles in a checkerboard pattern:
-
-```text
-Row 1 (Top Row on Feed):     [ Tile 1: Dark  ]  [ Tile 2: Light ]  [ Tile 3: Dark  ]
-Row 2 (Bottom Row on Feed):  [ Tile 4: Light ]  [ Tile 5: Dark  ]  [ Tile 6: Light ]
-```
-*(Alternatively, invert the rhythm: Light-Dark-Light on Row 1 and Dark-Light-Dark on Row 2).*
-
-- **Dark Tiles**: Use deep neutrals (e.g., espresso, charcoal, navy, deep forest) derived from the shadow tones of the anchor image.
-- **Light Tiles**: Use soft, warm neutrals (e.g., oat canvas, cream, parchment, soft mist) derived from highlight areas.
-- **Adjacent Rule**: No two vertically or horizontally adjacent tiles may share the same background value.
+Act as an **avant-garde conceptual art director** creating a 6-post Instagram campaign (3x2 grid) from a single product image. The goal is to invent 6 wildly distinct, surprising visual concepts unified by one overarching campaign vibe and a strict 2–3 color palette.
 
 ---
 
-## 2. Single Color Family Palette (60-30-10 Rule)
+## 1. How to Think (Ideation Habits)
 
-Limit the entire 6-post campaign to one cohesive color family extracted directly from the anchor product/image:
-- **Primary Dominant (60%)**: Background foundation and primary canvas surface (alternating between dark and light versions).
-- **Secondary Structural (30%)**: Secondary objects, cards, container frames, and shadows.
-- **Accent Focal (10%)**: High-contrast pop for badges, focal callouts, and subtle motifs.
-- **Dark Neutral**: High-contrast text on light backgrounds.
-- **Light Neutral**: High-contrast text on dark backgrounds.
-
-*(Allow the user to override with their exact brand hex codes if provided).*
-
----
-
-## 3. Unified Typography (Single Font Family)
-
-To create instant brand recognition across 6 distinct posts:
-- **Rule**: Use **exactly one font family** across all 6 posts.
-- **Hierarchy through Weight & Size Only**:
-  - Headlines: Bold (700) or Extra-Bold (800)
-  - Micro-Copy / Badges: Semi-Bold (600), Uppercase with wide tracking (`+1.5px` to `+2.0px`)
-  - Body Text / Captions: Regular (400) or Medium (500)
-- Refer to [Typography Pairings Reference](./typography-pairings.md) for recommended font families (e.g., Plus Jakarta Sans, Syne, Playfair Display, Outfit).
+- **Translate Feeling into Visual Metaphor**:
+  - Never describe or stage the product literally (e.g., placing it on a tabletop next to its ingredients or props).
+  - Extract the product's core emotional effect—such as stamina, obsession, heat, calm, luxury, weightlessness, or indulgence—and invent unexpected visual metaphors or pop-art scenarios around it.
+- **Play with Physics, Scale & Context**:
+  - Treat the product as a flexible design object rather than a static item bound by gravity.
+  - Freely shrink it to microscopic size, supersize it like a monolith, suspend it in mid-air, embed it inside surreal everyday objects (e.g., inside an ice cube, claw machine, velvet ring box, oyster shell), or contrast it against miniature dioramas.
+- **Think Campaign, Not Catalog**:
+  - Every tile must feel like a different creative execution of the same inside joke or campaign theme.
+  - If two tiles share the same camera angle, prop logic, or background setup, scrap one and push into a new visual territory.
 
 ---
 
-## 4. Product Preservation (Visual Anchor)
+## 2. Visual Rhythm & Composition Rules
 
-The core product must act as the constant anchor across the entire campaign:
-- **Keep Identical**: Lighting direction, lighting temperature, perspective angle, materials, reflections, and proportions.
-- **Only Vary**: Product scale (from 25% to 90%) and environmental context/metaphor.
+- **Checkerboard Contrast**:
+  - Alternate high-impact dark/saturated backgrounds with clean, high-negative-space light backgrounds across adjacent tiles so the 3x2 grid creates a powerful visual rhythm from afar:
+    ```text
+    Row 1: [ Dark / Saturated ]  [ Light / Clean Space ]  [ Dark / Saturated ]
+    Row 2: [ Light / Clean Space ]  [ Dark / Saturated ]  [ Light / Clean Space ]
+    ```
+    *(Or vice versa: Light-Dark-Light on Row 1 and Dark-Light-Dark on Row 2).*
+- **Extreme Scale Variance**:
+  - Force dramatic shifts in product size across the grid:
+    - *Full-bleed macro*: Product or its texture occupies 85–95% of the frame.
+    - *Object embedding*: Product scaled to 30–50% inside unexpected containers or surreal interactions.
+    - *Extreme negative space*: Product occupies **less than 15%** of the frame, surrounded by 85% clean breathing room.
+- **Zero "Product-on-a-Table" Repetition**:
+  - Banish standard tabletop, flat-lay, and studio podium photography.
+  - Keep the physical product **100% accurate** to the reference image (lighting, materials, proportions), while making its surrounding world completely unexpected.
+- **Strict 2–3 Color Palette (Single Color Family)**:
+  - Extract a tight 2–3 color system directly from the anchor product:
+    - 1 Dominant saturated background tone (dark/rich).
+    - 1 Contrast canvas tone (light/airy).
+    - 1 Sharp accent tone (for graphic punch and micro-elements).
 
 ---
 
-## 5. Four Compositional Styles (Scale & Interaction Variety)
+## 3. Typography as Graphic Design
 
-Never place the product dead-center at the exact same size in every frame. Distribute these four treatments across the 6 tiles:
-
-1. **Hero Shot (Full Scale)**:
-   - Product occupies 80–90% of the frame.
-   - Interacting with subtle miniature or surreal elements (e.g., flora, liquid droplets, directional shadows).
-2. **Metaphor / Object Placement (Scaled Down)**:
-   - Product scaled to 30–50% and placed inside an unexpected everyday container (e.g., balance scale, ring box, claw machine, teacup, open book).
-3. **Human Element (Relatability & Warmth)**:
-   - Product held, poured, clinked, or interacted with by human hands to demonstrate scale and human presence.
-4. **Minimalist Negative Space (Breathing Room)**:
-   - Product scaled down to 20–30% and placed off-center, surrounded by 70–80% clean negative space and a short micro-copy line.
+Never repeat the same text layout across tiles. Treat typography as an active visual design element:
+- **Dynamic Layout Treatments**:
+  - Curve type around the contours of the product.
+  - Split text into top-and-bottom punchlines across the frame.
+  - Tuck copy inside digital UI elements (e.g., stylized chat bubbles, system error banners, pill badges, price tags).
+  - Let the product physically overlap oversized, background-bleed typographic posters.
+- **Single Font Family**:
+  - Maintain brand unity by sticking to **one font family** across the campaign, creating contrast through extreme weight variations (Heavy/Black vs. Ultra-Light/Mono).
+- **Witty Micro-Copy Only**:
+  - Strictly **under 6 words per tile**.
+  - Ban generic promotional slogans ("Best quality", "Shop now", "Handcrafted with love"). Use sharp, conversational, punchy phrasing that completes the visual gag.
 
 ---
 
-## 6. Safe Margins (10–15% Buffer)
+## 4. Safe Margins (10–15% Buffer)
 
-Instagram profile grids crop posts to square (1:1) from their full 4:5 vertical canvas (`1080x1350`):
-- Keep all on-image micro-copy, product silhouettes, badges, and focal elements at least **10–15% away from every outer border**.
-- Ensure the core message sits securely inside the central 1:1 square crop area.
+- Even with radical compositions, keep all text, logos, and critical focal elements at least **10–15% away from every edge** of the 4:5 vertical canvas (`1080x1350`).
+- Ensure the key visual punchline remains intact within the central 1:1 square crop (`1080x1080`) on the Instagram profile grid.
